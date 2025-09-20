@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    android:overScrollMode="never">
+
+    <LinearLayout
+        android:id="@+id/contentRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="24dp"
+        android:paddingBottom="@dimen/onb_footer_clearance"
+        android:gravity="center_horizontal">
+
+        <!-- HERO -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivHero"
+            android:layout_width="260dp"
+            android:layout_height="260dp"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="18dp"
+            android:contentDescription="@string/hero_image_description"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Rounded16"
+            android:visibility="gone"/>
+
+        <!-- TITLE -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#111111"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <!-- BODY (subtitle) -->
+        <TextView
+            android:id="@+id/tvBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:lineSpacingExtra="2dp"
+            android:maxWidth="360dp"
+            android:textColor="#6B7280"
+            android:textSize="16sp" />
+
+        <!-- WELCOME bullets -->
+        <LinearLayout
+            android:id="@+id/llBullets"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:orientation="vertical"
+            android:visibility="gone" />
+
+        <!-- HOW caption -->
+        <TextView
+            android:id="@+id/tvStepsCaption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/onb_steps_caption"
+            android:textColor="#111111"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <!-- HOW cards -->
+        <LinearLayout
+            android:id="@+id/llSteps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical"
+            android:visibility="gone" />
+
+        <!-- HOW footnote -->
+        <TextView
+            android:id="@+id/tvHowFoot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/onb_how_footer"
+            android:textColor="#6B7280"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <!-- TIPS caption + list -->
+        <TextView
+            android:id="@+id/tvChecksCaption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/onb_tips_caption"
+            android:textColor="#111111"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/llChecks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/btnSeeTips"
+            style="?attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_button_outline_neutral"
+            android:gravity="center"
+            android:text="@string/onb_see_snap_tips"
+            android:textAllCaps="false"
+            android:textColor="#0B0D18"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <!-- ===== ORIGINAL INGREDIENTS (kept hidden) ===== -->
+        <TextView
+            android:id="@+id/tvCoverageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/onb_coverage_title"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#111111"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvCoverageSub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/onb_coverage_sub"
+            android:textColor="#6B7280"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <GridLayout
+            android:id="@+id/gridChips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:useDefaultMargins="true"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvMoreSoon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/onb_more_soon_plain"
+            android:textColor="#6B7280"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <!-- ===== COMPACT INGREDIENTS (reference design) ===== -->
+        <LinearLayout
+            android:id="@+id/sectionIngredientsCompact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/ingTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/onb_title_supported_simple"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#1A1A1A"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/ingSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#6B7280"
+                android:includeFontPadding="false"
+                android:layout_marginBottom="24dp"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/flexChips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:flexWrap="wrap"
+                app:justifyContent="center"
+                app:alignItems="center"
+                app:showDivider="none" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="32dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/ingMore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/onb_more_soon_plain"
+                    android:textSize="14sp"
+                    android:textColor="#6B7280" />
+
+                <TextView
+                    android:id="@+id/ingEmoji"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:layout_marginStart="4dp" />
+            </LinearLayout>
+        </LinearLayout>
+        <!-- ===== /COMPACT INGREDIENTS ===== -->
+
+    </LinearLayout>
+</ScrollView>

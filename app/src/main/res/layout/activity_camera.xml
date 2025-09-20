@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <!-- Camera Preview -->
+    <androidx.camera.view.PreviewView
+        android:id="@+id/preview_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:scaleType="fillCenter" />
+
+    <!-- Top bar -->
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:padding="16dp">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_margin="8dp"
+            app:fabSize="mini"
+            app:srcCompat="@drawable/ic_arrow_back"
+            app:backgroundTint="@android:color/white"
+            app:tint="#333333"
+            android:contentDescription="Back" />
+
+        <!-- NEW: Help ? -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="8dp"
+            app:fabSize="mini"
+            app:srcCompat="@drawable/ic_help_outline"
+            app:backgroundTint="@android:color/white"
+            app:tint="#333333"
+            android:contentDescription="Snap tips" />
+    </RelativeLayout>
+
+    <!-- Bottom Controls -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="32dp">
+
+        <!-- Instructions -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/rounded_background_dark"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:text="Point camera at ingredients and tap capture"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+        <!-- Capture Button -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_capture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fabSize="normal"
+            app:srcCompat="@drawable/ic_camera"
+            app:backgroundTint="#FF7A5C"
+            app:tint="@android:color/white"
+            android:contentDescription="Capture photo" />
+    </LinearLayout>
+
+    <!-- Scan frame -->
+    <View
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/scanning_frame"
+        android:visibility="visible" />
+</RelativeLayout>

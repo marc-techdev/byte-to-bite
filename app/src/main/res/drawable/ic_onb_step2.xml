@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <size android:width="200dp" android:height="200dp"/>
+            <solid android:color="@color/orange_soft_bg"/>
+            <stroke android:width="2dp" android:color="@color/orange_primary"/>
+        </shape>
+    </item>
+
+    <!-- Your list/recipes icon (you listed ic_group_recipes.xml) -->
+    <item
+        android:width="112dp"
+        android:height="112dp"
+        android:gravity="center"
+        android:drawable="@drawable/ic_group_recipes"
+        android:tint="@android:color/white"/>
+</layer-list>

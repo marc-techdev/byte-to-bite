@@ -1,0 +1,40 @@
+{
+  "ingredients": {
+    "1": {
+      "image": "ig_calamansi"
+    },
+    "2": {
+      "image": "ig_carrot"
+    },
+    "3": {
+      "image": "ig_chayote"
+    },
+    "4": {
+      "image": "ig_egg"
+    },
+    "5": {
+      "image": "ig_eggplant"
+    },
+    "6": {
+      "image": "ig_garlic"
+    },
+    "7": {
+      "image": "ig_ginger"
+    },
+    "8": {
+      "image": "ig_potato"
+    },
+    "9": {
+      "image": "ig_radish"
+    },
+    "10": {
+      "image": "ig_red_onion"
+    },
+    "11": {
+      "image": "ig_tomato"
+    },
+    "12": {
+      "image": "ig_white_onion"
+    }
+  }
+}

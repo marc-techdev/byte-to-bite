@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:orientation="vertical">
+
+    <!-- Fragment Container for different screens -->
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Top border line for bottom navigation -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E0E0E0" />
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:elevation="8dp"
+        android:orientation="horizontal"
+        android:paddingVertical="12dp">
+
+        <!-- Home Tab -->
+        <LinearLayout
+            android:id="@+id/tab_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingVertical="8dp">
+
+            <ImageView
+                android:id="@+id/icon_home"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/ic_home_page"
+                app:tint="#FF7A5C" />
+
+            <TextView
+                android:id="@+id/text_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textColor="#FF7A5C"
+                android:textSize="12sp" />
+
+            <!-- Active tab indicator line -->
+            <View
+                android:id="@+id/indicator_home"
+                android:layout_width="20dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="4dp"
+                android:background="#FF7A5C"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <!-- Vertical separator between tabs -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="8dp"
+            android:background="#F0F0F0" />
+
+        <!-- Scan Tab (Initially Active) -->
+        <LinearLayout
+            android:id="@+id/tab_scan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingVertical="8dp">
+
+            <ImageView
+                android:id="@+id/icon_scan"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/ic_camera_home"
+                app:tint="#999999"/>
+
+            <TextView
+                android:id="@+id/text_scan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Scan"
+                android:textColor="#999999"
+                android:textSize="12sp" />
+
+            <!-- Active tab indicator line -->
+            <View
+                android:id="@+id/indicator_scan"
+                android:layout_width="20dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="4dp"
+                android:background="#FF7A5C"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <!-- Vertical separator between tabs -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="8dp"
+            android:background="#F0F0F0" />
+
+        <!-- Recipes Tab -->
+        <LinearLayout
+            android:id="@+id/tab_recipes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingVertical="8dp">
+
+            <ImageView
+                android:id="@+id/icon_recipes"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/ic_menu_book_home"
+                app:tint="#999999" />
+
+            <TextView
+                android:id="@+id/text_recipes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recipes"
+                android:textColor="#999999"
+                android:textSize="12sp" />
+
+            <!-- Active tab indicator line -->
+            <View
+                android:id="@+id/indicator_recipes"
+                android:layout_width="20dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="4dp"
+                android:background="#FF7A5C"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <!-- Vertical separator between tabs -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="8dp"
+            android:background="#F0F0F0" />
+
+        <!-- Favorites Tab -->
+        <LinearLayout
+            android:id="@+id/tab_favorites"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingVertical="8dp">
+
+            <ImageView
+                android:id="@+id/icon_favorites"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/ic_favorite_home"
+                app:tint="#999999" />
+
+            <TextView
+                android:id="@+id/text_favorites"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Favorites"
+                android:textColor="#999999"
+                android:textSize="12sp" />
+
+            <!-- Active tab indicator line -->
+            <View
+                android:id="@+id/indicator_favorites"
+                android:layout_width="20dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="4dp"
+                android:background="#FF7A5C"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <!-- Vertical separator between tabs -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="8dp"
+            android:background="#F0F0F0" />
+
+        <!-- About Tab -->
+        <LinearLayout
+            android:id="@+id/tab_about"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingVertical="8dp">
+
+            <ImageView
+                android:id="@+id/icon_about"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/ic_info_home"
+                app:tint="#999999" />
+
+            <TextView
+                android:id="@+id/text_about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About"
+                android:textColor="#999999"
+                android:textSize="12sp" />
+
+            <!-- Active tab indicator line -->
+            <View
+                android:id="@+id/indicator_about"
+                android:layout_width="20dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="4dp"
+                android:background="#FF7A5C"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

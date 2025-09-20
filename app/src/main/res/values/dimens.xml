@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="onb_dot_size">8dp</dimen>
+    <dimen name="onb_dot_spacing">6dp</dimen>
+
+    <dimen name="onb_footer_clearance">96dp</dimen>
+</resources>
+

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="2dp"
+    android:layout_marginVertical="1dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="1dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <!-- Icon area: we keep BOTH an ImageView (for veggie images) and a TextView (emoji fallback for proteins) -->
+        <FrameLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp">
+
+            <!-- Your ingredient image (e.g., ig_carrot) -->
+            <ImageView
+                android:id="@+id/iv_ingredient_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:contentDescription="Ingredient image"
+                android:visibility="gone" />
+
+            <!-- Emoji fallback (used for proteins or when no drawable found) -->
+            <TextView
+                android:id="@+id/tv_ingredient_icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="🥬"
+                android:textSize="24sp"
+                android:visibility="visible" />
+        </FrameLayout>
+
+        <!-- Ingredient Details -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_ingredient_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pechay"
+                android:textColor="#1F1F1F"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_confidence_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Confidence: 95%"
+                android:textColor="#666666"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <!-- Remove Button -->
+        <ImageView
+            android:id="@+id/iv_remove_ingredient"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="12dp"
+            android:src="@drawable/ic_close"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="4dp"
+            app:tint="#999999"
+            android:contentDescription="Remove ingredient" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

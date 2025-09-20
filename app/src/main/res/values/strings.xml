@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App -->
+    <string name="app_name">Byte to Bite</string>
+    <string name="app_name_display">Byte to Bite</string>
+
+    <!-- App / hero -->
+    <string name="about_hero_title">About Byte to Bite</string>
+    <string name="about_hero_subtitle">See it, snap it — Filipino style.</string>
+    <string name="hero_image_description">Filipino cuisine hero image</string>
+
+    <!-- CTA -->
+    <string name="btn_learn_more">Learn more about Filipino cuisine</string>
+
+    <!-- About / descriptions -->
+    <string name="about_bulacan_title">About Filipino Cuisine</string>
+    <string name="app_description">
+        This app helps you identify Filipino ingredients and discover recipes from across the Philippines — from everyday staples to regional specialties.
+    </string>
+    <string name="bulacan_description_1">
+        Filipino cuisine blends local produce, seafood, meats, and spices with influences from history and geography. Each region adds its own flavors and techniques.
+    </string>
+    <string name="bulacan_description_2">
+        Many dishes highlight fresh, locally grown ingredients, celebrating markets and farms throughout the islands.
+    </string>
+
+    <!-- Feature cards -->
+    <string name="ingredient_recognition_title">Ingredient Recognition</string>
+    <string name="ingredient_recognition_desc">
+        Use your camera to identify common Filipino ingredients and find matching recipes.
+    </string>
+    <string name="local_ingredient_title">Local Ingredient Information</string>
+    <string name="local_ingredient_desc">
+        Learn where to find ingredients in local markets across the Philippines.
+    </string>
+    <string name="authentic_recipes_title">Authentic Recipes</string>
+    <string name="authentic_recipes_desc">
+        Discover Filipino recipes with detailed instructions and ingredient lists.
+    </string>
+
+    <!-- Footer -->
+    <string name="copyright_text">© 2025 Byte to Bite</string>
+    <string name="disclaimer_text">Based on traditional and modern Filipino cooking.</string>
+    <string name="about_filipino_cuisine_title">About Filipino Cuisine</string>
+    <string name="about_filipino_cuisine_body">
+Across the archipelago, each region adds its own flavors and techniques to Filipino cooking. Dishes vary by province, combining local produce, seafood, meats, and spices shaped by history and culture.
+    </string>
+    <string name="about_footer_short">Based on traditional and modern Filipino cooking.</string>
+
+    <!-- Scan -->
+    <string name="scan">SCAN</string>
+    <string name="scan_ingredients">Scan Ingredients</string>
+    <string name="scan_desc">Use your camera to identify Filipino ingredients and find matching recipes</string>
+    <string name="btn_scan_ingredient">Scan Ingredient</string>
+
+    <string name="identified_ingredients">Identified Ingredients</string>
+    <string name="no_ingredients_yet">No ingredients yet</string>
+    <string name="scan_to_find">Scan vegetables to find matching recipes</string>
+
+    <string name="clear_all">Clear All</string>
+    <string name="add_protein">Add Protein</string>
+    <string name="find_recipes">FIND RECIPES</string>
+
+    <!-- Add Protein dialog -->
+    <string name="dlg_add_protein_title">Add protein</string>
+    <string name="dlg_add_protein_hint">Pick one or more proteins to include</string>
+    <string name="dlg_cancel">Cancel</string>
+    <string name="dlg_add">Add</string>
+    <string name="protein_chicken">Chicken</string>
+    <string name="protein_pork">Pork</string>
+    <string name="protein_beef">Beef</string>
+    <string name="protein_fish">Fish</string>
+    <string name="protein_shrimp">Shrimp</string>
+    <string name="protein_egg">Egg</string>
+
+    <!-- Accessibility (content descriptions) -->
+    <string name="ingredient_recognition_icon">Ingredient recognition feature</string>
+    <string name="location_icon">Location information feature</string>
+    <string name="recipe_icon">Recipe feature</string>
+    <string name="cd_trash">Delete all identified ingredients</string>
+    <string name="cd_recipe_book_icon">Recipe book icon</string>
+    <string name="cd_camera_icon">Camera icon</string>
+    <string name="cd_arrow_right">Arrow</string>
+    <string name="cd_info">Information</string>
+    <string name="cd_check">Checkmark</string>
+    <string name="cd_bullet">Bullet icon</string>
+
+    <!-- ========== Onboarding (common) ========== -->
+    <string name="onb_title">Welcome</string>
+    <string name="onb_prev">Previous</string>
+    <string name="onb_next">Next</string>
+    <string name="onb_get_started">Get Started</string>
+    <string name="onb_see_tips">See Snap Tips</string>
+    <string name="onb_see_snap_tips">See Snap Tips</string>
+    <string name="onb_snap_tips_toast">Open Scan and tap the info icon for tips.</string>
+
+    <!-- Page 1: Welcome -->
+    <string name="onb_title_welcome">See it, snap it</string>
+    <string name="onb_body_welcome">
+        Identify Filipino ingredients with your camera and discover authentic local recipes instantly.
+    </string>
+    <string name="onb_bullet_w1">Scan with your camera</string>
+    <string name="onb_bullet_w2">Get recipe matches instantly</string>
+    <string name="onb_bullet_w3">Save favorites</string>
+
+    <!-- Page 2: How it works -->
+    <string name="onb_title_how">How it works</string>
+    <string name="onb_body_how">
+        Open Scan, point at an ingredient, and we suggest Filipino recipes you can cook.
+    </string>
+    <string name="onb_steps_caption">How it works</string>
+    <string name="onb_bullet_how1">Open Scan</string>
+    <string name="onb_bullet_how2">Frame the ingredient</string>
+    <string name="onb_bullet_how3">We match recipes</string>
+    <string name="onb_step1_title">Open Scan</string>
+    <string name="onb_step1_sub">Launch the camera scanner</string>
+    <string name="onb_step2_title">Frame the ingredient</string>
+    <string name="onb_step2_sub">Center the ingredient in view</string>
+    <string name="onb_step3_title">We match recipes</string>
+    <string name="onb_step3_sub">Get instant Filipino recipe suggestions</string>
+
+    <!-- Page 3: Snap Tips -->
+    <string name="onb_title_tips">Snap Tips</string>
+    <string name="onb_body_tips">Quick tips for better ingredient recognition.</string>
+    <string name="onb_tips_caption">Tips</string>
+    <string name="onb_bullet_t1">One item per frame</string>
+    <string name="onb_bullet_t2">Good lighting</string>
+    <string name="onb_bullet_t3">Fill the square</string>
+    <string name="onb_check1_title">One item per frame</string>
+    <string name="onb_check1_sub">Avoid multiple items at once</string>
+    <string name="onb_check2_title">Good lighting</string>
+    <string name="onb_check2_sub">Bright, even light helps recognition</string>
+    <string name="onb_check3_title">Fill the square</string>
+    <string name="onb_check3_sub">Move closer so the item fills the guide</string>
+
+    <!-- Page 4: Coverage / Ingredients -->
+
+    <string name="onb_supported_title">What can I scan?</string>
+    <string name="onb_supported_caption">Current model coverage: <b>12 ingredients</b> supported</string>
+    <string name="onb_supported_footnote">More coming soon 🌶️</string>
+    <string name="onb_coverage_title">What can I scan?</string>
+    <string name="onb_coverage_sub">Current model coverage: 12 ingredients supported</string>
+    <string name="onb_ingredients_footnote">
+        Currently supports 12 ingredients: Calamansi, Carrot, Chayote, Egg, Eggplant, Garlic, Ginger, Potato, Radish, Red Onion, Tomato, and White Onion. More coming soon.
+    </string>
+
+
+    <string name="onb_bullet_p1">On-device processing</string>
+    <string name="onb_bullet_p2">You control your data</string>
+
+
+    <!-- How page footnote -->
+    <string name="onb_how_footer">Simple and clear expectations before your first use</string>
+
+
+
+    <string name="onb_coverage_prefix">Current model coverage: </string>
+    <string name="onb_coverage_supported"> supported</string>
+    <string name="onb_coverage_count_fmt">%1$d ingredients</string>
+
+
+    <string name="onb_title_supported_simple">What can I scan?</string>
+    <string name="onb_coverage_compact">Current model coverage: <b>%1$d ingredients</b> </string>
+    <string name="onb_more_soon_plain">More coming soon 🚀</string>
+
+    <string name="onb_title_privacy">Your Privacy Matters</string>
+    <string name="onb_body_privacy">
+    Photos are processed on-device. Nothing is uploaded to servers. You control what to keep and what to delete.
+</string>
+
+    <string name="onb_privacy_point1">On-device processing</string>
+    <string name="onb_privacy_point2">You control your data</string>
+
+
+    <!-- Terms / Privacy TL;DR -->
+    <string name="tldr_title">Terms, Privacy &amp; Disclaimers</string>
+
+    <string name="tldr_b1">• Byte2Bite helps you identify ingredients and suggest recipes using on-device machine learning.</string>
+    <string name="tldr_b2">• Images are processed locally on your device and aren’t uploaded. We don’t collect personal data.</string>
+    <string name="tldr_b3">• Results may be inaccurate; always check labels, allergies, and doneness.</string>
+    <string name="tldr_b4">• Not medical or nutritional advice.</string>
+    <string name="tldr_b5">• By continuing you accept our Terms &amp; Privacy.</string>
+
+    <string name="tldr_btn_view_legal">View Terms &amp; Privacy</string>
+    <string name="tldr_btn_exit">Exit</string>
+    <string name="tldr_btn_continue">Continue</string>
+
+    <string name="tldr_check_terms">I agree to the Terms and Privacy Policy</string>
+    <string name="tldr_check_disclaimer">I understand results may be inaccurate and this is not medical or nutritional advice</string>
+
+
+
+
+
+
+
+
+
+</resources>

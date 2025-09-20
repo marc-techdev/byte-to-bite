@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="180dp"
+    android:viewportWidth="200"
+    android:viewportHeight="180">
+
+    <!-- Background -->
+    <path
+        android:fillColor="#FFF5F5F5"
+        android:pathData="M0,0h200v180H0z"/>
+
+    <!-- Plate -->
+    <path
+        android:fillColor="#FFE0E0E0"
+        android:pathData="M100,90m-50,0a50,50 0,1 1,100 0a50,50 0,1 1,-100 0"/>
+
+    <!-- Food items on plate -->
+    <path
+        android:fillColor="#FFBDBDBD"
+        android:pathData="M85,75m-8,0a8,8 0,1 1,16 0a8,8 0,1 1,-16 0"/>
+
+    <path
+        android:fillColor="#FFBDBDBD"
+        android:pathData="M115,80m-6,0a6,6 0,1 1,12 0a6,6 0,1 1,-12 0"/>
+
+    <path
+        android:fillColor="#FFBDBDBD"
+        android:pathData="M100,100m-10,0a10,10 0,1 1,20 0a10,10 0,1 1,-20 0"/>
+
+    <!-- Fork and knife -->
+    <path
+        android:fillColor="#FF9E9E9E"
+        android:pathData="M70,60L72,60L72,45L70,45z"/>
+
+    <path
+        android:fillColor="#FF9E9E9E"
+        android:pathData="M68,42L74,42L74,40L68,40z"/>
+
+    <path
+        android:fillColor="#FF9E9E9E"
+        android:pathData="M130,60L132,60L132,45L130,45z"/>
+
+    <path
+        android:fillColor="#FF9E9E9E"
+        android:pathData="M128,42L134,42L134,40L128,40z"/>
+
+    <!-- Chef hat icon -->
+    <path
+        android:fillColor="#FFCCCCCC"
+        android:pathData="M100,35m-15,0a15,15 0,1 1,30 0a15,15 0,1 1,-30 0"/>
+
+    <path
+        android:fillColor="#FFCCCCCC"
+        android:pathData="M85,40h30v8H85z"/>
+</vector>

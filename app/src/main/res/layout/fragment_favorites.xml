@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <!-- Sticky Header -->
+    <TextView
+        android:id="@+id/tv_sticky_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="FAVORITES"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:background="@android:color/white"
+        android:padding="16dp"
+        android:elevation="4dp"
+        android:gravity="start|center_vertical" />
+
+    <!-- Search Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/search_background_recipes"
+        android:gravity="center_vertical"
+        android:padding="12dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_search_recipes"
+            app:tint="#FF757575" />
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:minHeight="48dp"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:hint="Search recipes..."
+            android:textColor="#FF212121"
+            android:textColorHint="#FF757575"
+            android:textSize="14sp"
+            android:background="@android:color/transparent"
+            android:paddingVertical="12dp" />
+
+    </LinearLayout>
+
+    <!-- Favorite Recipe Count -->
+    <TextView
+        android:id="@+id/tv_favorite_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="My favorite recipes (0)"
+        android:textColor="#FF757575"
+        android:textSize="14sp" />
+
+    <!-- No Favorites -->
+    <LinearLayout
+        android:id="@+id/ll_no_favorites"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingHorizontal="32dp"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_no_favorites"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ic_favorite_border_recipes"
+            android:layout_marginBottom="24dp"
+            app:tint="#FFBDBDBD"
+            android:contentDescription="No favorite recipes illustration" />
+
+        <TextView
+            android:id="@+id/tv_no_favorites_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Favorite Recipes Yet"
+            android:textColor="#FF424242"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tv_no_favorites_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start adding your favorite Filipino recipes!\nTap the heart icon on any recipe to save it here."
+            android:textColor="#FF757575"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:lineSpacingExtra="2dp"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:id="@+id/tv_browse_suggestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Browse the Recipes tab to discover\namazing local dishes!"
+            android:textColor="#FF9E9E9E"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:lineSpacingExtra="1dp" />
+
+
+    </LinearLayout>
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_favorites"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="vertical"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+</LinearLayout>

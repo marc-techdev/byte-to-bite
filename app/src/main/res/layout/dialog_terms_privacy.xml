@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
+    app:cardCornerRadius="16dp"
+    app:cardUseCompatPadding="true"
+    app:strokeWidth="0dp">
+
+    <!-- Use a vertical container so the scrollable content sits above a fixed action bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- SCROLLABLE CONTENT -->
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true"
+            android:overScrollMode="ifContentScrolls"
+            android:clipToPadding="false"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Title -->
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tldr_title"
+                    android:textColor="#0B0D18"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp"/>
+
+                <!-- Bulleted TL;DR -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tldr_b1"
+                        android:textColor="#333333"
+                        android:textSize="16sp"
+                        android:lineSpacingExtra="2dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tldr_b2"
+                        android:textColor="#333333"
+                        android:textSize="16sp"
+                        android:layout_marginTop="4dp"
+                        android:lineSpacingExtra="2dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tldr_b3"
+                        android:textColor="#333333"
+                        android:textSize="16sp"
+                        android:layout_marginTop="4dp"
+                        android:lineSpacingExtra="2dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tldr_b4"
+                        android:textColor="#333333"
+                        android:textSize="16sp"
+                        android:layout_marginTop="4dp"
+                        android:lineSpacingExtra="2dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tldr_b5"
+                        android:textColor="#333333"
+                        android:textSize="16sp"
+                        android:layout_marginTop="4dp"
+                        android:lineSpacingExtra="2dp"/>
+                </LinearLayout>
+
+                <!-- “View Terms & Privacy” -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnViewLegal"
+                    style="@style/TextButton.Large"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tldr_btn_view_legal"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <!-- Check 1 -->
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/cbAgree"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/tldr_check_terms"
+                    android:textSize="16sp"/>
+
+                <!-- Check 2 -->
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/cbUnderstand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/tldr_check_disclaimer"
+                    android:textSize="16sp"/>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <!-- Divider above actions -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E5E7EB"/>
+
+        <!-- FIXED ACTION BAR -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCancel"
+                style="@style/TextButton.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tldr_btn_exit"
+                android:textSize="16sp"/>
+
+            <View
+                android:layout_width="8dp"
+                android:layout_height="1dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnContinue"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="@string/tldr_btn_continue"
+                android:enabled="false"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

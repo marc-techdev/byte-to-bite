@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp">
+
+    <!-- Leading icon -->
+    <ImageView
+        android:id="@+id/ivLead"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:tint="#0B0D18"
+        android:contentDescription="@null" />
+
+    <Space
+        android:layout_width="12dp"
+        android:layout_height="1dp" />
+
+    <!-- Primary text -->
+    <TextView
+        android:id="@+id/tvPrimary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="#111111"
+        android:textSize="16sp"
+        android:maxLines="1"
+        android:ellipsize="end" />
+
+    <!-- Secondary (optional) -->
+    <TextView
+        android:id="@+id/tvSecondary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#6B7280"
+        android:textSize="14sp"
+        android:visibility="gone" />
+</LinearLayout>

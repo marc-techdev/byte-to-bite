@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:orientation="vertical">
+
+    <!-- Sticky Header -->
+    <TextView
+        android:id="@+id/tv_sticky_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SCAN"
+        android:layout_marginTop="15dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:background="@android:color/white"
+        android:padding="16dp"
+        android:elevation="4dp"
+        android:gravity="start|center_vertical" />
+
+    <!-- Main Content Area -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- Header Section with bottom line -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:paddingLeft="24dp"
+            android:paddingTop="30dp"
+            android:paddingRight="24dp"
+            android:paddingBottom="32dp">
+
+            <!-- Horizontal line after page title -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="16dp"
+                android:background="#E0E0E0" />
+
+            <!-- Main Title -->
+            <TextView
+                android:id="@+id/tv_main_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="Scan Ingredients"
+                android:textColor="#1F1F1F"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <!-- Description -->
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:lineSpacingExtra="4dp"
+                android:text="Use your camera to identify ingredients and find matching Filipino recipes"
+                android:textColor="#666666"
+                android:textSize="16sp" />
+
+            <!-- Scan Button -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_scan_ingredient"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/scan_button_background"
+                android:elevation="2dp"
+                android:text="Scan Ingredient"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Thicker separator line between sections -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="#E8E8E8" />
+
+        <!-- Scrollable Content Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <!-- Section Header with underline and + Add protein on the right -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="24dp"
+                android:paddingTop="24dp"
+                android:paddingRight="24dp"
+                android:paddingBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tv_identified_header"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginBottom="5dp"
+                        android:text="Identified Ingredients"
+                        android:textColor="#1F1F1F"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <!-- Small pill button -->
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_add_protein"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:minHeight="32dp"
+                        android:background="@drawable/rounded_button_outline_orange"
+                        android:backgroundTint="@null"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:text="+ Add protein"
+                        android:textAllCaps="false"
+                        android:textColor="#FF7A5C"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:elevation="0dp" />
+                </LinearLayout>
+
+                <!-- Accent line under header -->
+                <View
+                    android:layout_width="60dp"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="1dp"
+                    android:background="#FF7A5C" />
+            </LinearLayout>
+
+            <!-- Scrollable Content Area -->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:fillViewport="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="200dp">
+
+                    <!-- Empty State -->
+                    <LinearLayout
+                        android:id="@+id/layout_empty_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_camera_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="24dp"
+                            android:background="@drawable/ic_camera_scan"
+                            android:textSize="48sp" />
+
+                        <View
+                            android:layout_width="40dp"
+                            android:layout_height="2dp"
+                            android:layout_marginBottom="16dp"
+                            android:background="#CCCCCC" />
+
+                        <TextView
+                            android:id="@+id/tv_empty_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:text="No ingredients yet"
+                            android:textColor="#1F1F1F"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_empty_description"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:lineSpacingExtra="2dp"
+                            android:text="Scan ingredients to find matching recipes"
+                            android:textColor="#999999"
+                            android:textSize="14sp" />
+
+                        <View
+                            android:layout_width="40dp"
+                            android:layout_height="2dp"
+                            android:layout_marginTop="16dp"
+                            android:background="#CCCCCC" />
+                    </LinearLayout>
+
+                    <!-- Ingredients List -->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_ingredients"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:nestedScrollingEnabled="false"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </ScrollView>
+
+            <!-- Fixed Bottom Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@android:color/white">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="24dp"
+                    android:background="#E7E7E7" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginBottom="22dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/ic_trash_scan"
+                        app:tint="#FF7A5C"
+                        android:contentDescription="Trash icon" />
+
+                    <TextView
+                        android:id="@+id/btn_clear_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Clear All"
+                        android:textColor="#FF7A5C"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="8dp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+
+                    <!-- no Add Protein here anymore -->
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_find_recipes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minHeight="48dp"
+                        android:background="@drawable/rounded_button_background"
+                        android:backgroundTint="@null"
+                        android:paddingHorizontal="24dp"
+                        android:paddingVertical="12dp"
+                        android:text="FIND RECIPES"
+                        android:textAllCaps="true"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:elevation="2dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

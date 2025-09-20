@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <color name="gray_dark">#666666</color>
+    <color name="gray_light">#CCCCCC</color>
+
+    //Recipe Container
+    <color name="green_500">#4CAF50</color>
+    <color name="orange_500">#FF9800</color>
+    <color name="red_500">#F44336</color>
+
+    <color name="off_white">#FAFAFA</color>
+
+    <color name="mint_cream">#F5FFFA</color>
+    <color name="honeydew">#F0FFF0</color>
+    <color name="tea_green">#D0F0C0</color>
+    <color name="pale_mint">#E3FFE5</color>
+
+    <color name="gray">#888888</color>
+
+    <color name="on_orange">#FFFFFF</color>
+    <color name="card_stroke">#E9E9E9</color>
+
+    <color name="orange_primary">#FF6B35</color>           <!-- your existing brand orange -->
+    <color name="orange_soft_bg">#14FF6B35</color>        <!-- 8% alpha background -->
+    <color name="orange_soft_stroke">#26FF6B35</color>    <!-- ~15% alpha for card stroke -->
+    <color name="orange_ripple">#33FF6B35</color>         <!-- ~20% alpha ripple -->
+
+    <color name="green_success">#22C55E</color>
+    <color name="red_error">#EF4444</color>
+
+    <color name="onb_orange">#FF6A2A</color>
+
+
+
+
+
+</resources>

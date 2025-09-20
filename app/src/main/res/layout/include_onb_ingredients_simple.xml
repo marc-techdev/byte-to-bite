@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ingredientsSimple"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/ingTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What can I scan?"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#1A1A1A"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Subtitle: Current model coverage: 12 ingredients supported -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current model coverage: "
+            android:textSize="16sp"
+            android:textColor="#6B7280" />
+
+        <TextView
+            android:id="@+id/ingCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12 ingredients"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#1A1A1A" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" supported"
+            android:textSize="16sp"
+            android:textColor="#6B7280" />
+    </LinearLayout>
+
+    <!-- ROW 1 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <TextView style="@style/IngredientChip" android:text="Calamansi"/>
+        <TextView style="@style/IngredientChip" android:text="Carrot"/>
+        <TextView style="@style/IngredientChip" android:text="Chayote"/>
+    </LinearLayout>
+
+    <!-- ROW 2 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <TextView style="@style/IngredientChip" android:text="Egg"/>
+        <TextView style="@style/IngredientChip" android:text="Eggplant"/>
+        <TextView style="@style/IngredientChip" android:text="Garlic"/>
+    </LinearLayout>
+
+    <!-- ROW 3 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <TextView style="@style/IngredientChip" android:text="Ginger"/>
+        <TextView style="@style/IngredientChip" android:text="Potato"/>
+        <TextView style="@style/IngredientChip" android:text="Radish"/>
+    </LinearLayout>
+
+    <!-- ROW 4 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginBottom="6dp">
+
+        <TextView style="@style/IngredientChip" android:text="Red Onion"/>
+        <TextView style="@style/IngredientChip" android:text="Tomato"/>
+        <TextView style="@style/IngredientChip" android:text="White Onion"/>
+    </LinearLayout>
+
+    <!-- Footer line -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="More coming soon "
+            android:textSize="16sp"
+            android:textColor="#6B7280" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🌶️"
+            android:textSize="16sp" />
+    </LinearLayout>
+</LinearLayout>

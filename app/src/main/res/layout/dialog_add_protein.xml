@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    android:paddingTop="20dp"
+    android:paddingBottom="12dp">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add protein"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#1F1F1F"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Helper -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pick one or more proteins to include"
+        android:textSize="14sp"
+        android:textColor="#777777"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Chips (Egg removed) -->
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:singleLine="false"
+        app:singleSelection="false"
+        app:chipSpacingHorizontal="8dp"
+        app:chipSpacingVertical="8dp">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipChicken"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chicken"
+            app:checkedIconVisible="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipPork"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pork"
+            app:checkedIconVisible="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipBeef"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Beef"
+            app:checkedIconVisible="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipFish"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fish"
+            app:checkedIconVisible="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipShrimp"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shrimp"
+            app:checkedIconVisible="true" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <!-- Actions -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layout_marginTop="20dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:minHeight="48dp"
+            android:background="@drawable/rounded_button_outline_orange"
+            android:backgroundTint="@null"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:textColor="#FF7A5C"
+            android:textStyle="bold"
+            android:paddingHorizontal="16dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:minHeight="48dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/rounded_button_background"
+            android:backgroundTint="@null"
+            android:text="Add"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:paddingHorizontal="24dp" />
+    </LinearLayout>
+
+</LinearLayout>

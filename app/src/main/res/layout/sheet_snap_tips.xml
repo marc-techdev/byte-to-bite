@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@android:color/white">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Snap Tips"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Good -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingVertical="8dp">
+
+        <ImageView
+            android:id="@+id/ivGood"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="Good"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="12dp"
+            android:text="✓ Fill the square with ONE ingredient, sharp and well lit."
+            android:textSize="14sp"
+            android:textColor="#333333"/>
+    </LinearLayout>
+
+    <!-- Too close -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingVertical="8dp">
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="Bad"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="12dp"
+            android:text="✗ Avoid getting too close or cutting parts of the ingredient."
+            android:textSize="14sp"
+            android:textColor="#333333"/>
+    </LinearLayout>
+
+    <!-- Too far -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingVertical="8dp">
+
+        <ImageView
+            android:id="@+id/ivFar"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="Bad"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="12dp"
+            android:text="✗ Avoid being too far; the ingredient should fill most of the frame."
+            android:textSize="14sp"
+            android:textColor="#333333"/>
+    </LinearLayout>
+
+    <!-- Multiple -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingVertical="8dp"
+        android:layout_marginBottom="16dp">
+
+        <ImageView
+            android:id="@+id/ivMultiple"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="Bad"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="12dp"
+            android:text="✗ Only one ingredient in the square—don't include multiple items."
+            android:textSize="14sp"
+            android:textColor="#333333"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnContinue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        android:textStyle="bold"
+        android:background="#D85A3C"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="8dp"/>
+
+</LinearLayout>

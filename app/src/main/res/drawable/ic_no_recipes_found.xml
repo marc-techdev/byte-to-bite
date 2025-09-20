@@ -1,0 +1,32 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Circle lens -->
+    <path
+        android:fillColor="#999999"
+        android:pathData="M10,2A8,8 0 0,1 18,10A8,8 0 0,1 10,18A8,8 0 0,1 2,10A8,8 0 0,1 10,2Z"/>
+
+    <!-- Handle -->
+    <path
+        android:fillColor="#999999"
+        android:pathData="M15.5,15.5L22,22"
+        android:strokeColor="#999999"
+        android:strokeWidth="2"/>
+
+    <!-- X inside the circle -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="1.5"
+        android:strokeLineCap="round"
+        android:pathData="M7,7 L13,13" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="1.5"
+        android:strokeLineCap="round"
+        android:pathData="M13,7 L7,13" />
+</vector>

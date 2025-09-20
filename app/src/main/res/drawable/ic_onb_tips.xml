@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    <!-- phone body -->
+    <path android:fillColor="#0B0B14"
+        android:pathData="M40,18h40a8,8 0 0,1 8,8v68a8,8 0 0,1 -8,8h-40a8,8 0 0,1 -8,-8v-68a8,8 0 0,1 8,-8z"/>
+    <!-- screen -->
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M44,30h32a4,4 0 0,1 4,4v44a4,4 0 0,1 -4,4h-32a4,4 0 0,1 -4,-4v-44a4,4 0 0,1 4,-4z"/>
+    <!-- camera notch / dot -->
+    <path android:fillColor="#0B0B14" android:pathData="M60,26h8a2,2 0 0,1 0,4h-8a2,2 0 0,1 0,-4z"/>
+    <!-- sparkle -->
+    <path android:fillColor="#FF6B35"
+        android:pathData="M92,28l3,7l7,3l-7,3l-3,7l-3,-7l-7,-3l7,-3z"/>
+</vector>
