@@ -342,7 +342,7 @@
 
             </LinearLayout>
 
-            <!-- Learn More Button Section -->
+            <!-- Learn More + Terms Buttons Section -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -355,7 +355,7 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginRight="16dp"
                     android:layout_marginLeft="16dp"
-                    android:layout_marginBottom="16dp"
+                    android:layout_marginBottom="8dp"
                     android:backgroundTint="@color/orange_primary"
                     app:cornerRadius="12dp"
                     android:drawableEnd="@drawable/ic_external_link"
@@ -365,6 +365,22 @@
                     android:textColor="@color/white"
                     android:textSize="16sp"
                     android:textStyle="bold" />
+
+                <!-- NEW: Terms & Privacy button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnTermsPrivacy"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:cornerRadius="12dp"
+                    app:strokeWidth="1dp"
+                    android:padding="16dp"
+                    android:text="@string/about_view_terms_privacy"
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <!-- Footer -->

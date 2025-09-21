@@ -139,7 +139,7 @@
             <ImageView
                 android:id="@+id/icon_recipes"
                 android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:layout_height="wrap_content"
                 android:layout_marginBottom="4dp"
                 android:src="@drawable/ic_menu_book_home"
                 app:tint="#999999" />

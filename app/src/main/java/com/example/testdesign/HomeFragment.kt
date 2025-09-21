@@ -2,25 +2,41 @@ package com.example.testdesign
 
 import android.content.Context
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.viewpager2.widget.ViewPager2
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import java.io.BufferedReader
 import java.text.Normalizer
+import kotlin.math.abs
 import kotlin.random.Random
 
 class HomeFragment : Fragment() {
 
-    // Views
-    private lateinit var heroImage: ImageView
+    // HERO carousel
+    private lateinit var heroPager: ViewPager2
+    private var heroAdapter: HeroCarouselAdapter? = null
+    private val heroHandler = Handler(Looper.getMainLooper())
+    private val autoSlideInterval = 4800L
+    private val autoSlide = object : Runnable {
+        override fun run() {
+            if (::heroPager.isInitialized && (heroAdapter?.itemCount ?: 0) > 1) {
+                heroPager.setCurrentItem(heroPager.currentItem + 1, true)
+                heroHandler.postDelayed(this, autoSlideInterval)
+            }
+        }
+    }
+
+    // Nav
     private lateinit var scanCard: View
     private lateinit var seeAll: TextView
 
@@ -48,19 +64,20 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? = inflater.inflate(R.layout.fragment_home, container, false)
+    ): View = inflater.inflate(R.layout.fragment_home, container, false)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // --- hero
-        heroImage = view.findViewById(R.id.iv_cuisine_background)
+        // HERO
+        heroPager = view.findViewById(R.id.vp_hero)
+        setupHeroPagerTransform()
 
-        // --- nav bits
+        // Nav
         scanCard = view.findViewById(R.id.layout_scan_vegetables)
         seeAll = view.findViewById(R.id.tv_see_all)
 
-        // --- matching UI
+        // Matching UI
         tvMatchingHeader = view.findViewById(R.id.tv_matching_recipes)
         rvMatches = view.findViewById(R.id.rv_matching_recipes)
         emptyLayout = view.findViewById(R.id.ll_matching_empty)
@@ -71,11 +88,10 @@ class HomeFragment : Fragment() {
         }
         rvMatches.adapter = matchesAdapter
 
-        // Featured fragment (keep your previous behavior)
+        // Featured fragment
         if (savedInstanceState == null) {
-            val featured = FeaturedRecipesFragment()
             childFragmentManager.beginTransaction()
-                .replace(R.id.fragment_featured_recipes_container, featured)
+                .replace(R.id.fragment_featured_recipes_container, FeaturedRecipesFragment())
                 .commit()
         }
 
@@ -85,24 +101,85 @@ class HomeFragment : Fragment() {
 
         // Load data + populate
         loadRecipesFromAssets()
-        setRandomHeroImage()
+        setupHeroCarousel()
         populateMatchingSection()
     }
 
-    private fun openScanTab() {
-        // Ask MainActivity to switch to Scan tab
-        (activity as? MainActivity)?.let { main ->
-            // Simulate clicking the bottom nav's Scan tab
-            main.findViewById<View>(R.id.tab_scan)?.performClick()
+    // -------- HERO helpers --------
+
+    private fun setupHeroPagerTransform() {
+        // Cross-fade transformer (smooth, no sliding text)
+        heroPager.setPageTransformer { page, position ->
+            // keep pages stacked
+            page.translationX = -page.width * position
+            page.alpha = 1f - kotlin.math.min(1f, abs(position))
         }
+
+        // reset auto-slide timer on user swipe
+        heroPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            override fun onPageSelected(position: Int) {
+                restartAutoSlide()
+            }
+        })
+    }
+
+    private fun setupHeroCarousel() {
+        val images = buildHeroImages()
+        if (images.isEmpty()) return
+
+        heroAdapter = HeroCarouselAdapter(images)
+        heroPager.adapter = heroAdapter
+
+        // start near middle to allow infinite scroll feel
+        val start = if (images.size > 1) {
+            val mid = Int.MAX_VALUE / 2
+            mid - (mid % images.size)
+        } else 0
+        heroPager.setCurrentItem(start, false)
+    }
+
+    private fun buildHeroImages(): List<Int> {
+        // Try to collect up to 8 valid drawables from recipe images
+        val ids = mutableListOf<Int>()
+        for (r in allRecipes.shuffled(Random(System.currentTimeMillis()))) {
+            val name = r.imageUrl ?: continue
+            val id = resources.getIdentifier(name, "drawable", requireContext().packageName)
+            if (id != 0 && !ids.contains(id)) ids += id
+            if (ids.size >= 8) break
+        }
+        if (ids.isEmpty()) {
+            // Safe fallback (won't crash even if you don’t have placeholders)
+            ids += android.R.drawable.ic_menu_gallery
+        }
+        return ids
+    }
+
+    private fun restartAutoSlide() {
+        heroHandler.removeCallbacks(autoSlide)
+        heroHandler.postDelayed(autoSlide, autoSlideInterval)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        restartAutoSlide()      // resume auto-play
+        populateMatchingSection() // in case scans changed
+    }
+
+    override fun onPause() {
+        heroHandler.removeCallbacks(autoSlide)
+        super.onPause()
+    }
+
+    // -------- Navigation --------
+    private fun openScanTab() {
+        (activity as? MainActivity)?.findViewById<View>(R.id.tab_scan)?.performClick()
     }
 
     private fun openRecipesTab() {
-        (activity as? MainActivity)?.let { main ->
-            main.findViewById<View>(R.id.tab_recipes)?.performClick()
-        }
+        (activity as? MainActivity)?.findViewById<View>(R.id.tab_recipes)?.performClick()
     }
 
+    // -------- Data --------
     private fun loadRecipesFromAssets() {
         try {
             val inputStream = requireContext().assets.open("recipes.json")
@@ -115,15 +192,7 @@ class HomeFragment : Fragment() {
         }
     }
 
-    private fun setRandomHeroImage() {
-        if (allRecipes.isEmpty()) return
-        val pick = allRecipes[Random.nextInt(allRecipes.size)]
-        pick.imageUrl?.let { name ->
-            val resId = resources.getIdentifier(name, "drawable", requireContext().packageName)
-            if (resId != 0) heroImage.setImageResource(resId)
-        }
-    }
-
+    // -------- Matching section --------
     private fun populateMatchingSection() {
         val scanned = readSavedScannedIngredients()
         val scannedNames = scanned.map { normalize(it.name) }.filter { it.isNotBlank() }
@@ -135,17 +204,14 @@ class HomeFragment : Fragment() {
             allRecipes.mapNotNull { recipe ->
                 val recipeText = (recipe.ingredients + listOf(recipe.title, recipe.subtitle))
                     .joinToString("\n") { normalize(it) }
-
                 val hit = scannedNames.count { kw -> recipeText.contains(kw) }
-                if (hit > 0) {
-                    HomeMatchesAdapter.MatchedRecipe(recipe, hit, totalScanned)
-                } else null
+                if (hit > 0) HomeMatchesAdapter.MatchedRecipe(recipe, hit, totalScanned) else null
             }
                 .sortedWith(
                     compareByDescending<HomeMatchesAdapter.MatchedRecipe> { it.matchCount }
                         .thenBy { it.recipe.title }
                 )
-                .take(3) // show top 3
+                .take(3)
         }
 
         if (matches.isEmpty()) {
@@ -165,7 +231,7 @@ class HomeFragment : Fragment() {
         val json = sp.getString(KEY_INGREDIENTS, null) ?: return emptyList()
         return try {
             val type = object : TypeToken<List<SavedIngredient>>() {}.type
-            gson.fromJson<List<SavedIngredient>>(json, type) ?: emptyList()
+            Gson().fromJson<List<SavedIngredient>>(json, type) ?: emptyList()
         } catch (_: Exception) {
             emptyList()
         }

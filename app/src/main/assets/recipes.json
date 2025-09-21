@@ -1,24 +1,87 @@
 [
   {
     "id": 1,
+    "title": "Adobong Baboy",
+    "subtitle": "Pork adobo braised in soy and vinegar",
+    "cookingTime": "60 min",
+    "servings": "4-6",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Easy",
+    "imageUrl": "img_adobong_baboy",
+    "isFavorite": false,
+    "ingredients": [
+      "1 kg pork belly/shoulder (chunks)",
+      "2 tbsp cooking oil",
+      "6 cloves garlic (minced)",
+      "1 medium onion (sliced)",
+      "1/2 cup soy sauce",
+      "1/3 cup vinegar",
+      "1 tsp whole peppercorns",
+      "3 bay leaves",
+      "1 cup water",
+      "Sugar, salt to taste"
+    ],
+    "instructions": [
+      "Heat oil; sauté garlic and onion.",
+      "Add pork; cook until lightly browned.",
+      "Pour soy sauce and vinegar (do not stir 30 seconds). Add peppercorns, bay leaves, and water.",
+      "Cover and simmer until tender, 30–40 minutes.",
+      "Uncover and reduce sauce; balance with a pinch of sugar. Adjust seasoning.",
+      "Serve with rice."
+    ],
+    "description": "Classic pork adobo braised in soy, vinegar, and garlic."
+  },
+  {
+    "id": 2,
+    "title": "Adobong Dilaw",
+    "subtitle": "Batangas-style turmeric pork adobo",
+    "cookingTime": "60 min",
+    "servings": "4-6",
+    "region": "Batangas, CALABARZON",
+    "difficulty": "Easy",
+    "imageUrl": "img_adobong_dilaw",
+    "isFavorite": false,
+    "ingredients": [
+      "1 kg pork (belly/shoulder) chunks",
+      "2 tbsp oil",
+      "6 cloves garlic (minced)",
+      "1 onion (sliced)",
+      "1/2 cup vinegar",
+      "1 cup water",
+      "1 tsp ground turmeric (or 1 tbsp fresh grated)",
+      "1 tsp whole peppercorns",
+      "3 bay leaves",
+      "Salt to taste"
+    ],
+    "instructions": [
+      "Sauté garlic and onion in oil.",
+      "Add pork; cook until browned.",
+      "Pour vinegar and water; add turmeric, peppercorns, and bay leaves.",
+      "Simmer until pork is tender and sauce reduces.",
+      "Season with salt."
+    ],
+    "description": "Batangas-style yellow adobo colored and scented with turmeric."
+  },
+  {
+    "id": 3,
     "title": "Adobong Gulay",
     "subtitle": "Vegetable adobo",
     "cookingTime": "25 min",
-    "servings": "4-5 people",
-    "region": "Bulacan",
+    "servings": "4-5",
+    "region": "Bulacan, Central Luzon",
     "difficulty": "Easy",
     "imageUrl": "img_adobong_gulay",
     "isFavorite": false,
     "ingredients": [
-      "2 large eggplants (cubed)",
-      "2 medium potatoes (cubed)",
       "1 large carrot (sliced)",
       "1 red onion (sliced)",
-      "6 cloves garlic (crushed)",
       "1/4 cup soy sauce",
-      "2 tbsp vinegar",
       "2 bay leaves",
+      "2 large eggplants (cubed)",
+      "2 medium potatoes (cubed)",
+      "2 tbsp vinegar",
       "3 tbsp cooking oil",
+      "6 cloves garlic (crushed)",
       "Salt and pepper to taste"
     ],
     "instructions": [
@@ -34,24 +97,52 @@
     "description": "A vegetarian version of the classic adobo, featuring mixed vegetables braised in the traditional soy sauce and vinegar combination."
   },
   {
-    "id": 2,
+    "id": 4,
+    "title": "Adobong Kangkong",
+    "subtitle": "Water spinach in garlicky adobo sauce",
+    "cookingTime": "20 min",
+    "servings": "4 ",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Easy",
+    "imageUrl": "img_adobong_kangkong",
+    "isFavorite": false,
+    "ingredients": [
+      "2 bundles kangkong (water spinach), cut",
+      "2 tbsp oil",
+      "4 cloves garlic (minced)",
+      "1 small onion (sliced)",
+      "3 tbsp soy sauce",
+      "2 tbsp vinegar",
+      "1/4 tsp pepper",
+      "1 tsp sugar (optional)"
+    ],
+    "instructions": [
+      "Sauté garlic and onion in oil.",
+      "Add kangkong stems; cook 1–2 minutes, then leaves.",
+      "Splash in soy and vinegar; season with pepper and sugar. Toss just until wilted."
+    ],
+    "description": "Quick garlicky adobo-style sauté of water spinach."
+  },
+  {
+    "id": 5,
     "title": "Adobong Manok",
     "subtitle": "Traditional Filipino chicken adobo",
     "cookingTime": "45 min",
-    "servings": "4-6 people",
+    "servings": "4-6",
+    "region": "Nationwide (Philippines)",
     "difficulty": "Easy",
     "imageUrl": "img_adobong_manok",
     "isFavorite": false,
     "ingredients": [
-      "2 lbs chicken (cut into pieces)",
-      "1/2 cup soy sauce",
-      "1/4 cup white vinegar",
-      "6 cloves garlic (minced)",
-      "3-4 bay leaves",
-      "1 medium onion (sliced)",
       "1 inch ginger (sliced)",
+      "1 medium onion (sliced)",
+      "1/2 cup soy sauce",
       "1/2 tsp black peppercorns",
+      "1/4 cup white vinegar",
+      "2 lbs chicken (cut into pieces)",
       "2 tbsp cooking oil",
+      "3-4 bay leaves",
+      "6 cloves garlic (minced)",
       "Salt to taste"
     ],
     "instructions": [
@@ -65,57 +156,846 @@
     "description": "A traditional Filipino version of the classic adobong manok, featuring authentic flavors and cooking techniques passed down through generations."
   },
   {
-    "id": 3,
+    "id": 6,
+    "title": "Adobong Pusit",
+    "subtitle": "Squid cooked in its ink with soy and vinegar",
+    "cookingTime": "30 min",
+    "servings": "4",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Easy",
+    "imageUrl": "img_adobong_pusit",
+    "isFavorite": false,
+    "ingredients": [
+      "1 kg squid (cleaned, with ink)",
+      "2 tbsp oil",
+      "6 cloves garlic (minced)",
+      "1 small onion (sliced)",
+      "1/4 cup soy sauce",
+      "1/4 cup vinegar",
+      "1 tsp sugar",
+      "1 bay leaf",
+      "Pepper to taste"
+    ],
+    "instructions": [
+      "Sauté garlic and onion in oil.",
+      "Add squid; cook 1–2 minutes.",
+      "Pour soy, vinegar, sugar, and ink; add bay leaf and pepper.",
+      "Simmer 3–5 minutes only (do not overcook)."
+    ],
+    "description": "Tender squid in a savory-tangy black adobo sauce."
+  },
+  {
+    "id": 7,
+    "title": "Adobong Sitaw",
+    "subtitle": "String beans simmered in soy-vinegar adobo",
+    "cookingTime": "25 min",
+    "servings": "4",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Easy",
+    "imageUrl": "img_adobong_sitaw",
+    "isFavorite": false,
+    "ingredients": [
+      "400 g string beans (2-inch cuts)",
+      "2 tbsp oil",
+      "4 cloves garlic (minced)",
+      "1 small onion (sliced)",
+      "2 tomatoes (chopped)",
+      "3 tbsp soy sauce",
+      "2 tbsp vinegar",
+      "1/4 tsp pepper"
+    ],
+    "instructions": [
+      "Sauté garlic, onion, and tomatoes.",
+      "Add sitaw; toss 1 minute.",
+      "Pour soy and vinegar; cover and cook until crisp-tender.",
+      "Season to taste."
+    ],
+    "description": "String beans in a light soy-vinegar sauté."
+  },
+  {
+    "id": 8,
+    "title": "Adobong Talong",
+    "subtitle": "Eggplant braised in soy-vinegar garlic sauce",
+    "cookingTime": "25 min",
+    "servings": "4",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Easy",
+    "imageUrl": "img_adobong_talong",
+    "isFavorite": false,
+    "ingredients": [
+      "3 large eggplants (chunks)",
+      "3 tbsp oil",
+      "6 cloves garlic (minced)",
+      "1 small onion (sliced)",
+      "3 tbsp soy sauce",
+      "2 tbsp vinegar",
+      "1 tsp sugar",
+      "Pepper"
+    ],
+    "instructions": [
+      "Pan-fry eggplant pieces in 2 tbsp oil until lightly browned; set aside.",
+      "In same pan, add 1 tbsp oil; sauté garlic and onion.",
+      "Return eggplant; add soy, vinegar, sugar, and pepper. Toss 1–2 minutes."
+    ],
+    "description": "Eggplant briefly pan-fried then tossed in garlicky adobo glaze."
+  },
+  {
+    "id": 9,
+    "title": "Afritadang Baboy",
+    "subtitle": "Pork afritada in tomato sauce with potatoes and carrots",
+    "cookingTime": "60 min",
+    "servings": "4-6",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Easy",
+    "imageUrl": "img_afritadang_baboy",
+    "isFavorite": false,
+    "ingredients": [
+      "2 tbsp oil",
+      "6 cloves garlic (minced)",
+      "1 onion (chopped)",
+      "pork 1 kg, cubed",
+      "1 cup tomato sauce",
+      "2 cups broth",
+      "2 potatoes (cubed)",
+      "1 large carrot (chunks)",
+      "1 bell pepper (sliced)",
+      "Fish sauce/salt and pepper"
+    ],
+    "instructions": [
+      "Sauté aromatics; add meat and brown.",
+      "Add tomato sauce and broth; simmer until tender.",
+      "Add potatoes, carrots, bell pepper; season and finish."
+    ],
+    "description": "Tomato-based stew with potatoes and carrots."
+  },
+  {
+    "id": 10,
+    "title": "Afritadang Manok",
+    "subtitle": "Chicken afritada stewed in tomato sauce",
+    "cookingTime": "60 min",
+    "servings": "4-6",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Easy",
+    "imageUrl": "img_afritadang_manok",
+    "isFavorite": false,
+    "ingredients": [
+      "2 tbsp oil",
+      "6 cloves garlic (minced)",
+      "1 onion (chopped)",
+      "chicken cut-ups 1 kg",
+      "1 cup tomato sauce",
+      "2 cups broth",
+      "2 potatoes (cubed)",
+      "1 large carrot (chunks)",
+      "1 bell pepper (sliced)",
+      "Fish sauce/salt and pepper"
+    ],
+    "instructions": [
+      "Sauté aromatics; add meat and brown.",
+      "Add tomato sauce and broth; simmer until tender.",
+      "Add potatoes, carrots, bell pepper; season and finish."
+    ],
+    "description": "Tomato-based stew with potatoes and carrots."
+  },
+  {
+    "id": 11,
+    "title": "Arroz Caldo",
+    "subtitle": "Filipino chicken rice porridge",
+    "cookingTime": "50 min",
+    "servings": "5-6",
+    "region": "CALABARZON",
+    "difficulty": "Easy",
+    "imageUrl": "img_arroz_caldo",
+    "isFavorite": false,
+    "ingredients": [
+      "1 cup glutinous rice",
+      "1 white onion (chopped)",
+      "1/2 kilo chicken (cut into serving pieces)",
+      "2 inches ginger (julienned)",
+      "2 tbsp cooking oil",
+      "6 cloves garlic (minced)",
+      "6 cups chicken broth",
+      "Boiled egg (optional, for topping)",
+      "Calamansi for serving",
+      "Salt and pepper to taste"
+    ],
+    "instructions": [
+      "Heat oil in a pot, sauté garlic, onion, and ginger.",
+      "Add chicken and cook until lightly browned.",
+      "Add rice and stir for 2 minutes.",
+      "Pour in chicken broth and simmer until rice is soft.",
+      "Season with salt and pepper.",
+      "Serve hot with calamansi and boiled egg on top."
+    ],
+    "description": "A comforting rice porridge infused with ginger and chicken, perfect for rainy days."
+  },
+  {
+    "id": 12,
+    "title": "Arroz Valenciana",
+    "subtitle": "Fiesta rice with chicken, chorizo, and aromatics",
+    "cookingTime": "75 min",
+    "servings": "6–8",
+    "region": "Mindanao & Visayas",
+    "difficulty": "Medium",
+    "imageUrl": "img_arroz_valenciana",
+    "isFavorite": false,
+    "ingredients": [
+      "2 tbsp annatto oil",
+      "6 cloves garlic (minced)",
+      "1 onion (chopped)",
+      "500 g chicken (chunks)",
+      "150 g chorizo (sliced)",
+      "1 1/2 cups glutinous rice (malagkit), rinsed",
+      "1 cup regular rice, rinsed",
+      "4–5 cups chicken broth",
+      "1 cup coconut milk (optional)",
+      "1 tsp turmeric or annatto",
+      "1 large carrot (diced)",
+      "1 bell pepper (strips)",
+      "Salt & pepper"
+    ],
+    "instructions": [
+      "Sauté garlic and onion in annatto oil. Add chicken and chorizo; brown lightly.",
+      "Stir in rinsed rice; toast 1–2 minutes.",
+      "Pour broth (and coconut milk if using); add turmeric/annatto; cover and cook on low, stirring occasionally.",
+      "Add carrots and bell pepper in the last 10 minutes. Cook until rice is tender and liquid is absorbed.",
+      "Rest 5 minutes before serving."
+    ],
+    "description": "Fiesta rice similar to paella with Filipino flavors."
+  },
+  {
+    "id": 13,
     "title": "Asado de Carajay",
     "subtitle": "One of the food served during the Liberation of Bulacan Province",
     "cookingTime": "2 hours",
-    "servings": "6 people",
+    "servings": "6",
+    "region": "Bulacan, Central Luzon",
     "difficulty": "Medium",
     "imageUrl": "img_asado_carajay",
     "isFavorite": false,
     "ingredients": [
-      "1 whole chicken (approx. 1 kilo)",
-      "¼ cup salt",
-      "4 pcs ginger (chopped and squeeze to get juice)",
-      "½ cup soy sauce",
       "1 tbsp dayap juice",
-      "½ cup onion (white) chopped finely",
-      "¼ cup garlic, chopped finely",
-      "½ cup onion (red), chopped finely",
-      "¼ cup beer (pale pilsen)",
+      "1 whole chicken (approx. 1 kilo)",
       "3 pcs laurel leaves",
+      "4 pcs ginger (chopped and squeeze to get juice)",
+      "cooking oil",
       "salt to taste",
-      "cooking oil"
+      "¼ cup beer (pale pilsen)",
+      "12–16 cloves garlic, finely chopped (about ¼ cup)",
+      "1–2 tsp salt (adjust to taste)",
+      "½ cup red onion, finely chopped",
+      "½ cup white onion, finely chopped",
+      "½ cup soy sauce"
     ],
     "instructions": [
       "Rub onto the chicken a handful of salt and the ginger's juice.",
       "Marinate the chicken for at least 1 hour in soysauce, dayap juice and laurel leaves, then fry a little, set aside.",
-      "Saute garlic, white onion and red onion, add the liquid marinade and let it simmer.",
+      "Sauté garlic, white onion and red onion, add the liquid marinade and let it simmer.",
       "Put the chicken unto the mixture, add beer and additional laurel leaves if desired.",
       "Season it with salt and sugar (according to taste).",
-      "Cook in slow fire until the chicken is tender and cooked and the sauce thickens."
+      "Cook in low heat until the chicken is tender and cooked and the sauce thickens."
     ],
     "description": "A traditional Bulacan heritage chicken dish served during the Liberation of Bulacan Province, marinated and cooked in a savory sauce."
   },
   {
-    "id": 4,
+    "id": 14,
+    "title": "Baka Pares",
+    "subtitle": "Beef in sweet-savory sauce served with garlic rice",
+    "cookingTime": "120 min",
+    "servings": "4–6",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Medium",
+    "imageUrl": "img_baka_pares",
+    "isFavorite": false,
+    "ingredients": [
+      "1 kg beef brisket/shank (chunks)",
+      "1 tbsp oil",
+      "6 cloves garlic (minced)",
+      "1 onion (chopped)",
+      "1/2 cup soy sauce",
+      "1/4 cup brown sugar",
+      "1 star anise",
+      "1 thumb ginger (sliced)",
+      "4 cups water/broth",
+      "Salt & pepper",
+      "Chopped spring onions (for garnish)"
+    ],
+    "instructions": [
+      "Sauté garlic and onion; add beef and ginger; cook until lightly browned.",
+      "Pour soy sauce, sugar, and water/broth; add star anise. Simmer on low until beef is tender (60–90 minutes).",
+      "Adjust seasoning with salt and pepper. Garnish with spring onions; serve with garlic rice and soup."
+    ],
+    "description": "Sweet-savory braised beef served with garlic rice and clear soup."
+  },
+  {
+    "id": 15,
+    "title": "Baked Macaroni",
+    "subtitle": "Filipino-style baked macaroni with sweet meat sauce",
+    "cookingTime": "70 min",
+    "servings": "6–8",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Medium",
+    "imageUrl": "img_baked_macaroni",
+    "isFavorite": false,
+    "ingredients": [
+      "400 g elbow macaroni (cooked al dente)",
+      "2 tbsp oil",
+      "6 cloves garlic (minced)",
+      "1 onion (chopped)",
+      "500 g ground pork or beef",
+      "2 cups tomato sauce (+ 2 tbsp banana ketchup, optional)",
+      "1 cup broth/water",
+      "1 small carrot (diced, optional)",
+      "Salt, pepper, sugar to taste",
+      "2 tbsp butter",
+      "2 tbsp flour",
+      "2 cups milk",
+      "1–2 cups grated cheese",
+      "Pinch salt & pepper"
+    ],
+    "instructions": [
+      "Make meat sauce: sauté garlic/onion; brown ground meat. Add tomato sauce and water; season; simmer 10–15 minutes (add carrot if using).",
+      "Make béchamel: melt butter; whisk in flour; cook 1 minute. Slowly add milk; thicken; stir in cheese; season lightly.",
+      "Combine pasta with meat sauce. Transfer to baking dish; spread béchamel; top with more cheese if desired.",
+      "Bake at 180°C (350°F) for 15–25 minutes until bubbly and lightly golden. Rest 5 minutes."
+    ],
+    "description": "Filipino-style baked macaroni with sweet-savory meat sauce and creamy cheese topping."
+  },
+  {
+    "id": 16,
+    "title": "Bicol Express",
+    "subtitle": "Spicy pork in coconut milk and chilies",
+    "cookingTime": "45 min",
+    "servings": "4–6",
+    "region": "Bicol",
+    "difficulty": "Easy",
+    "imageUrl": "img_bicol_express",
+    "isFavorite": false,
+    "ingredients": [
+      "1 tbsp oil",
+      "6 cloves garlic (minced)",
+      "1 onion (chopped)",
+      "700 g pork belly (strips)",
+      "1–2 tbsp bagoong alamang (shrimp paste)",
+      "2 cups coconut milk",
+      "1/2 cup coconut cream (optional)",
+      "4–6 long green chilies (sliced) + bird’s eye chilies to taste",
+      "Salt & pepper"
+    ],
+    "instructions": [
+      "Sauté garlic and onion; add pork; cook until lightly browned and fat renders.",
+      "Stir in shrimp paste; cook 1 minute.",
+      "Pour coconut milk; add chilies; simmer until pork is tender and sauce reduces.",
+      "Add coconut cream (if using) and simmer to desired thickness. Season to taste."
+    ],
+    "description": "Spicy pork stewed in coconut milk with chilies and shrimp paste."
+  },
+  {
+    "id": 17,
+    "title": "Binagoongan Baboy",
+    "subtitle": "Pork simmered in shrimp paste with tomatoes",
+    "cookingTime": "60 min",
+    "servings": "4–6",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Easy",
+    "imageUrl": "img_binagoongan_baboy",
+    "isFavorite": false,
+    "ingredients": [
+      "1 tbsp oil",
+      "6 cloves garlic (minced)",
+      "1 onion (chopped)",
+      "700 g pork belly/shoulder (cubes)",
+      "2 tomatoes (chopped)",
+      "1–2 tbsp bagoong alamang (shrimp paste)",
+      "1–2 long green chilies (sliced)",
+      "1/2 cup water",
+      "1 tsp sugar (optional)",
+      "Pepper"
+    ],
+    "instructions": [
+      "Sauté garlic and onion; add pork and cook until lightly browned.",
+      "Add tomatoes; cook until soft. Stir in shrimp paste and chilies.",
+      "Pour water; simmer until pork is tender and sauce reduces. Balance with a pinch of sugar if needed; season with pepper."
+    ],
+    "description": "Pork sautéed in shrimp paste with tomatoes and chilies."
+  },
+  {
+    "id": 18,
+    "title": "Bistek Tagalog",
+    "subtitle": "Filipino beef steak with calamansi and onions",
+    "cookingTime": "45 min",
+    "servings": "4-6",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Easy",
+    "imageUrl": "img_bistek_tagalog",
+    "isFavorite": false,
+    "ingredients": [
+      "700 g beef sirloin (thinly sliced)",
+      "1/4 cup soy sauce",
+      "1/4 cup calamansi juice",
+      "1 tsp black pepper",
+      "2 tbsp oil",
+      "2 onions (rings)",
+      "1/2 cup water",
+      "Salt"
+    ],
+    "instructions": [
+      "Marinate beef in soy, calamansi, pepper 20–30 min.",
+      "Sear beef; set aside. Sauté onions; add marinade and water; simmer.",
+      "Return beef; season and serve with onions."
+    ],
+    "description": "Beef marinated in calamansi-soy, topped with onions."
+  },
+  {
+    "id": 19,
+    "title": "Bola-bola",
+    "subtitle": "Filipino meatballs in savory gravy",
+    "cookingTime": "40 min",
+    "servings": "4–6",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Easy",
+    "imageUrl": "img_bola_bola",
+    "isFavorite": false,
+    "ingredients": [
+      "500 g ground pork (or pork-beef mix)",
+      "1 small onion (minced)",
+      "4 cloves garlic (minced)",
+      "1 small carrot (finely diced)",
+      "1 egg",
+      "1/2 cup breadcrumbs",
+      "1 tsp salt",
+      "1/2 tsp black pepper",
+      "Oil for frying"
+    ],
+    "instructions": [
+      "Combine ground meat, onion, garlic, carrot, egg, breadcrumbs, salt, and pepper until tacky.",
+      "Form 1–1.5 inch balls; chill 15 minutes.",
+      "Pan-fry until browned and cooked through. Serve or add to sauce/noodles."
+    ],
+    "description": "Filipino meatballs seasoned with aromatics."
+  },
+  {
+    "id": 20,
+    "title": "Bulalo",
+    "subtitle": "Beef shank soup with marrow and vegetables",
+    "cookingTime": "3 hours",
+    "servings": "5–6",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Medium",
+    "imageUrl": "img_bulalo",
+    "isFavorite": false,
+    "ingredients": [
+      "1.5–2 kg beef shank with marrow",
+      "1 large onion (quartered)",
+      "6 cloves garlic (crushed)",
+      "1 tbsp whole peppercorns",
+      "2–3 corn cobs (chunks)",
+      "2 potatoes (quartered)",
+      "1 small cabbage/pechay (wedges)",
+      "Salt & fish sauce to taste",
+      "Water to cover"
+    ],
+    "instructions": [
+      "Cover beef with water; optionally parboil and discard first water to remove impurities.",
+      "Refill with fresh water; add onion, garlic, peppercorns; simmer gently 1.5–2 hours until tender.",
+      "Add corn and potatoes; cook until tender. Season with salt/fish sauce. Add greens just before serving."
+    ],
+    "description": "Beef shank and marrow soup with vegetables."
+  },
+  {
+    "id": 21,
+    "title": "Bulanglang",
+    "subtitle": "Vegetable soup with fish or shrimp",
+    "cookingTime": "40 min",
+    "servings": "5",
+    "region": "CALABARZON",
+    "difficulty": "Easy",
+    "imageUrl": "img_bulanglang",
+    "isFavorite": false,
+    "ingredients": [
+      "1 large eggplant (sliced)",
+      "1 medium radish (sliced)",
+      "1 medium sayote (sliced)",
+      "1 red onion (sliced)",
+      "2 medium tomatoes (quartered)",
+      "200g shrimp or small fish",
+      "6 cups water",
+      "Fish sauce to taste"
+    ],
+    "instructions": [
+      "Bring water to boil and add tomatoes and onion.",
+      "Add shrimp or fish and cook for 5 minutes.",
+      "Add sayote, radish, and eggplant.",
+      "Simmer until vegetables are tender.",
+      "Season with fish sauce.",
+      "Serve hot with rice."
+    ],
+    "description": "A light and healthy Tagalog vegetable soup with shrimp or fish."
+  },
+  {
+    "id": 22,
+    "title": "Calderetang Baka",
+    "subtitle": "Beef caldereta in tomato sauce",
+    "cookingTime": "2 hours",
+    "servings": "4–6",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Medium",
+    "imageUrl": "img_calderetang_baka",
+    "isFavorite": false,
+    "ingredients": [
+      "1 kg beef chuck (cubes)",
+      "2 tbsp oil",
+      "6 cloves garlic (minced)",
+      "1 onion (chopped)",
+      "1 1/2 cups tomato sauce",
+      "3 cups broth",
+      "2 potatoes (cubed)",
+      "1 large carrot (chunks)",
+      "1 bell pepper (sliced)",
+      "2 tbsp liver spread (optional)",
+      "1–2 tbsp soy sauce",
+      "Salt & pepper"
+    ],
+    "instructions": [
+      "Brown beef in oil; set aside. Sauté garlic and onion; return beef.",
+      "Add tomato sauce and broth; simmer until beef is tender (60–90 minutes).",
+      "Add potatoes and carrots; cook until tender. Stir in bell pepper and liver spread (if using). Season to taste."
+    ],
+    "description": "Rich tomato-beef stew; optional liver spread adds depth."
+  },
+  {
+    "id": 23,
+    "title": "Chicken Curry (Filipino)",
+    "subtitle": "Creamy chicken curry with coconut milk and potatoes",
+    "cookingTime": "60 min",
+    "servings": "4–6",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Easy",
+    "imageUrl": "img_chicken_curry_filipino",
+    "isFavorite": false,
+    "ingredients": [
+      "2 tbsp oil",
+      "6 cloves garlic (minced)",
+      "1 onion (chopped)",
+      "1 tbsp ginger (julienned)",
+      "1 kg chicken (cut-ups)",
+      "1–2 tbsp curry powder",
+      "1 can (400 ml) coconut milk",
+      "1/2 cup water",
+      "2 potatoes (cubed)",
+      "1 large carrot (chunks)",
+      "1 bell pepper (sliced)",
+      "Salt & pepper"
+    ],
+    "instructions": [
+      "Sauté garlic, onion, and ginger. Add chicken; cook until lightly browned.",
+      "Sprinkle curry powder; stir 30 seconds. Pour coconut milk and water; simmer.",
+      "Add potatoes and carrots; cook until tender. Stir in bell peppers; season to taste."
+    ],
+    "description": "Creamy Filipino-style chicken curry with coconut milk and vegetables."
+  },
+  {
+    "id": 24,
+    "title": "Chicken Inasal",
+    "subtitle": "Ilonggo grilled chicken with calamansi and garlic",
+    "cookingTime": "30 min (plus marinating)",
+    "servings": "4-6",
+    "region": "Iloilo & Bacolod, Western Visayas",
+    "difficulty": "Easy",
+    "imageUrl": "img_chicken_inasal",
+    "isFavorite": false,
+    "ingredients": [
+      "2 lbs chicken leg quarters or thighs",
+      "1/4 cup calamansi juice",
+      "1/4 cup cane vinegar",
+      "4 cloves garlic (minced)",
+      "1 tbsp ginger (grated)",
+      "1 small red onion (sliced)",
+      "2 stalks lemongrass (white part, minced, optional)",
+      "1 tbsp brown sugar",
+      "1 tsp salt",
+      "1/2 tsp black pepper",
+      "1/4 cup annatto oil (for basting)",
+      "2 tbsp butter or margarine (for basting)",
+      "1 clove garlic (minced, optional, for basting)",
+      "Pinch of salt (for basting)"
+    ],
+    "instructions": [
+      "Whisk calamansi, vinegar, garlic, ginger, onion, lemongrass (optional), sugar, salt, and pepper.",
+      "Marinate chicken 2–4 hours or overnight.",
+      "Mix annatto oil and butter; add a pinch of salt and garlic (optional) for basting.",
+      "Grill over medium heat 20–30 minutes, turning and basting, until 74°C/165°F internal.",
+      "Rest 5 minutes; serve with spiced vinegar, atchara, and garlic rice."
+    ],
+    "description": "Ilonggo grilled chicken marinated in calamansi, vinegar, and aromatics; basted with annatto oil."
+  },
+  {
+    "id": 25,
+    "title": "Chicken Pastel",
+    "subtitle": "Creamy chicken stew with mushrooms and sausages",
+    "cookingTime": "65 min",
+    "servings": "4–6",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Easy",
+    "imageUrl": "img_chicken_pastel",
+    "isFavorite": false,
+    "ingredients": [
+      "2 tbsp oil",
+      "6 cloves garlic (minced)",
+      "1 onion (chopped)",
+      "1 kg chicken (boneless chunks)",
+      "1 cup mushrooms (sliced)",
+      "1 cup sausages (sliced)",
+      "1 cup evaporated milk or cream",
+      "1 cup chicken broth",
+      "1 large carrot (diced)",
+      "1 cup green peas",
+      "2 potatoes (cubed, optional)",
+      "1 tbsp soy sauce",
+      "Salt & pepper"
+    ],
+    "instructions": [
+      "Sauté garlic and onion; add chicken and cook until no longer pink.",
+      "Add mushrooms and sausages; sauté briefly.",
+      "Pour broth and milk/cream; simmer.",
+      "Add carrot, peas (and potatoes if using); cook until tender and sauce is creamy. Season to taste."
+    ],
+    "description": "Creamy chicken stew with mushrooms and sausages."
+  },
+  {
+    "id": 26,
+    "title": "Chopsuey",
+    "subtitle": "Stir-fried vegetables with meat and quail eggs",
+    "cookingTime": "30 min",
+    "servings": "4–6",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Easy",
+    "imageUrl": "img_chopsuey",
+    "isFavorite": false,
+    "ingredients": [
+      "2 tbsp oil",
+      "4 cloves garlic (minced)",
+      "1 onion (sliced)",
+      "200 g pork/chicken/shrimp (optional)",
+      "1 large carrot (bias-sliced)",
+      "1 cup cauliflower/broccoli florets",
+      "1 cup cabbage (chunks)",
+      "1 small sayote (sliced)",
+      "8–10 quail eggs (boiled)",
+      "1 cup chicken stock",
+      "1 tbsp oyster sauce",
+      "1 tbsp soy sauce",
+      "1 tsp cornstarch in 2 tbsp water",
+      "Salt & pepper"
+    ],
+    "instructions": [
+      "Sauté garlic and onion; add meat/shrimp if using and cook until just done.",
+      "Add hard vegetables (carrots, sayote) then stock and sauces; simmer briefly.",
+      "Stir in cabbage and florets; add cornstarch slurry to thicken.",
+      "Toss in quail eggs; season to taste and serve."
+    ],
+    "description": "Stir-fry of mixed vegetables with light savory sauce."
+  },
+  {
+    "id": 27,
+    "title": "Crispy Pata",
+    "subtitle": "Deep-fried pork knuckles with dipping sauce",
+    "cookingTime": "3 hours",
+    "servings": "4-6",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Medium",
+    "imageUrl": "img_crispy_pata",
+    "isFavorite": false,
+    "ingredients": [
+      "1 whole pork leg (pata), 1.2–1.5 kg, cleaned",
+      "1 head garlic (crushed)",
+      "1 large onion (quartered, red or white)",
+      "1 tbsp whole peppercorns",
+      "3 bay leaves",
+      "1/2 cup cane or white vinegar",
+      "1/4 cup salt (for simmering/brine), plus extra to season",
+      "Water to cover",
+      "Oil for deep-frying",
+      "1/4 cup soy sauce",
+      "1/4 cup cane vinegar",
+      "2–3 pieces calamansi (juiced)",
+      "1 small red onion (finely chopped)",
+      "2 cloves garlic (minced)",
+      "1 chili (optional)",
+      "Pinch of sugar and black pepper"
+    ],
+    "instructions": [
+      "Simmer pork leg with salt, garlic, onion, peppercorns, bay leaves, and vinegar until tender.",
+      "Drain, dry thoroughly, and chill uncovered 4 hours or overnight to dry the skin.",
+      "Deep-fry at 175–180°C until blistered and crisp; rest 10 minutes.",
+      "Serve with soy–vinegar–calamansi dipping sauce with onion and garlic."
+    ],
+    "description": "Deep-fried pork leg with shatteringly crisp skin and juicy meat."
+  },
+  {
+    "id": 28,
+    "title": "Daing na Bangus",
+    "subtitle": "Marinated milkfish fried until crisp",
+    "cookingTime": "15 min cook",
+    "servings": "3–4",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Easy",
+    "imageUrl": "img_daing_na_bangus",
+    "isFavorite": false,
+    "ingredients": [
+      "1 large bangus, butterflied and deboned",
+      "1/2 cup cane vinegar",
+      "6 cloves garlic (crushed)",
+      "1 tsp salt",
+      "1/2 tsp black pepper",
+      "Oil for frying"
+    ],
+    "instructions": [
+      "Combine vinegar, garlic, salt, and pepper. Marinate bangus 8–12 hours (refrigerated).",
+      "Drain and pat dry. Pan-fry skin-side down first until crisp; flip and cook the other side.",
+      "Serve with garlic rice and spiced vinegar."
+    ],
+    "description": "Milkfish marinated in vinegar, garlic, and pepper, then fried until crisp."
+  },
+  {
+    "id": 29,
+    "title": "Dinakdakan",
+    "subtitle": "Ilocano grilled pork salad with onions and mayo",
+    "cookingTime": "90 min",
+    "servings": "4–6",
+    "region": "Ilocos",
+    "difficulty": "Medium",
+    "imageUrl": "img_dinakdakan",
+    "isFavorite": false,
+    "ingredients": [
+      "1 kg pork ears/cheeks/shoulder (cleaned)",
+      "Salt & pepper",
+      "1 small red onion (sliced)",
+      "2–3 calamansi (juiced)",
+      "2 tbsp mayonnaise (or mashed grilled liver)",
+      "2 cloves garlic (minced, optional)",
+      "1–2 chilies (sliced)"
+    ],
+    "instructions": [
+      "Boil pork parts in salted water until tender; drain and grill/sear for smoky flavor.",
+      "Chop into small pieces. Toss with onions, calamansi juice, mayo (or liver), garlic (optional), and chilies.",
+      "Season to taste; serve warm."
+    ],
+    "description": "Grilled/boiled pork salad with creamy-citrus dressing."
+  },
+  {
+    "id": 30,
+    "title": "Dinuguan",
+    "subtitle": "Rich and savory pork blood stew",
+    "cookingTime": "60 min",
+    "servings": "4–6",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Medium",
+    "imageUrl": "img_dinuguan",
+    "isFavorite": false,
+    "ingredients": [
+      "700 g pork shoulder/belly (cubes) + offal (optional)",
+      "1 tbsp oil",
+      "6 cloves garlic (minced)",
+      "1 onion (chopped)",
+      "1 cup pork blood (well-mixed)",
+      "1/4 cup vinegar",
+      "2 cups water/broth",
+      "1 long green chili",
+      "Salt & pepper"
+    ],
+    "instructions": [
+      "Sauté garlic and onion; add pork and cook until lightly browned.",
+      "Pour water/broth and simmer until tender.",
+      "Lower heat; stir in pork blood gradually. Add vinegar and chili; simmer gently, stirring, until thick. Season to taste."
+    ],
+    "description": "Savory, tangy pork blood stew."
+  },
+  {
+    "id": 31,
+    "title": "Embutido",
+    "subtitle": "Filipino-style steamed meatloaf with carrots and raisins",
+    "cookingTime": "90 min (incl. steaming)",
+    "servings": "6–8",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Medium",
+    "imageUrl": "img_embutido",
+    "isFavorite": false,
+    "ingredients": [
+      "1 kg ground pork",
+      "1 small onion (minced)",
+      "4 cloves garlic (minced)",
+      "1 small carrot (finely diced)",
+      "1/4 cup relish",
+      "1/4 cup raisins",
+      "1/2 cup breadcrumbs",
+      "2 eggs",
+      "1 tsp salt",
+      "1/2 tsp pepper",
+      "2 hard-boiled eggs (halved)",
+      "2 hotdog sticks (quartered)",
+      "Foil for wrapping"
+    ],
+    "instructions": [
+      "Mix pork, onion, garlic, carrot, relish, raisins, breadcrumbs, eggs, salt, and pepper until tacky.",
+      "Spread on foil, arrange egg and hotdogs; roll and seal tightly.",
+      "Steam 50–60 minutes. Cool, slice, and pan-fry if desired."
+    ],
+    "description": "Filipino-style steamed meatloaf with sweet-savory notes."
+  },
+  {
+    "id": 32,
+    "title": "Empanadang Manok",
+    "subtitle": "Filipino chicken empanadas",
+    "cookingTime": "120 min (with chilling)",
+    "servings": "6–8",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Medium",
+    "imageUrl": "img_empanadang_manok",
+    "isFavorite": false,
+    "ingredients": [
+      "2 tbsp oil",
+      "4 cloves garlic (minced)",
+      "1 onion (chopped)",
+      "400 g cooked chicken (shredded)",
+      "1 small potato (diced)",
+      "1 small carrot (diced)",
+      "1/2 cup green peas",
+      "1/2 cup chicken broth",
+      "Salt & pepper",
+      "3 cups all-purpose flour",
+      "1 tsp salt",
+      "1 cup cold butter (cubed)",
+      "1/2–2/3 cup cold water",
+      "1 egg (for egg wash)"
+    ],
+    "instructions": [
+      "Filling: sauté garlic and onion; add chicken, potato, carrot; pour broth and simmer until tender. Stir in peas; season; cool.",
+      "Dough: mix flour and salt; cut in butter until sandy; add cold water to bring together. Chill 20–30 minutes.",
+      "Assemble: roll dough, cut rounds, add filling, fold and crimp. Brush with egg wash. Bake at 200°C (400°F) 20–25 minutes until golden."
+    ],
+    "description": "Savory chicken empanadas with flaky pastry."
+  },
+  {
+    "id": 33,
     "title": "Ensaladang Labanos at Kamatis",
     "subtitle": "Traditional Bulacan radish and tomato salad",
     "cookingTime": "15 min",
-    "servings": "4-5 people",
+    "servings": "4-5",
+    "region": "Bulacan, Central Luzon",
     "difficulty": "Easy",
     "imageUrl": "img_ensalada_labanos",
     "isFavorite": false,
     "ingredients": [
-      "2 large radishes (julienned)",
-      "3 medium tomatoes (sliced)",
+      "1 hard-boiled egg (sliced, optional)",
       "1 red onion (thinly sliced)",
-      "4 cloves garlic (minced)",
-      "1/4 cup calamansi juice",
-      "2 tbsp cooking oil",
       "1 tsp salt",
       "1/2 tsp black pepper",
-      "1 hard-boiled egg (sliced, optional)"
+      "1/4 cup calamansi juice",
+      "2 large radishes (julienned)",
+      "2 tbsp cooking oil",
+      "3 medium tomatoes (sliced)",
+      "4 cloves garlic (minced)"
     ],
     "instructions": [
       "Sprinkle salt over julienned radish and let sit for 10 minutes.",
@@ -130,26 +1010,225 @@
     "description": "A refreshing and zesty salad that highlights the crisp texture of fresh radish paired with ripe tomatoes, dressed in a tangy calamansi vinaigrette."
   },
   {
-    "id": 5,
+    "id": 34,
+    "title": "Escabecheng Isda",
+    "subtitle": "Sweet and sour fish with peppers and carrots",
+    "cookingTime": "40 min",
+    "servings": "3–4",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Easy",
+    "imageUrl": "img_escabecheng_isda",
+    "isFavorite": false,
+    "ingredients": [
+      "1 whole fish (tilapia/lapu-lapu), cleaned",
+      "Salt & pepper",
+      "Oil for frying",
+      "1 tbsp oil",
+      "4 cloves garlic (minced)",
+      "1 onion (sliced)",
+      "1 small carrot (matchsticks)",
+      "1/2 bell pepper (strips)",
+      "1 cup water",
+      "3 tbsp vinegar",
+      "3 tbsp ketchup",
+      "2 tbsp sugar",
+      "1 tsp cornstarch in 2 tbsp water",
+      "Salt & pepper"
+    ],
+    "instructions": [
+      "Season fish; fry until crisp. Set on a platter.",
+      "Sauce: sauté garlic and onion; add carrot/bell pepper.",
+      "Add water, vinegar, ketchup, and sugar; simmer. Thicken with cornstarch slurry; season.",
+      "Pour over fried fish and serve."
+    ],
+    "description": "Fried fish topped with sweet-and-sour vegetable sauce."
+  },
+  {
+    "id": 35,
+    "title": "Ginataang Alimasag",
+    "subtitle": "Crab simmered in coconut milk",
+    "cookingTime": "35 min",
+    "servings": "4",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Easy",
+    "imageUrl": "img_ginataang_alimasag",
+    "isFavorite": false,
+    "ingredients": [
+      "1 kg crabs (cleaned)",
+      "1 tbsp oil",
+      "4 cloves garlic (minced)",
+      "1 onion (sliced)",
+      "1 thumb ginger (sliced)",
+      "2 cups coconut milk",
+      "1/2 cup coconut cream (optional)",
+      "2–3 chilies (optional)",
+      "Fish sauce or salt"
+    ],
+    "instructions": [
+      "Sauté garlic, onion, and ginger.",
+      "Add crabs; toss. Pour coconut milk; add chilies. Simmer until crabs are cooked.",
+      "Stir in coconut cream (if using); season to taste."
+    ],
+    "description": "Crabs simmered in rich coconut milk with aromatics."
+  },
+  {
+    "id": 36,
+    "title": "Ginataang Gulay",
+    "subtitle": "Vegetables cooked in coconut milk",
+    "cookingTime": "35 min",
+    "servings": "4",
+    "region": "Bicol",
+    "difficulty": "Easy",
+    "imageUrl": "img_ginataang_gulay",
+    "isFavorite": false,
+    "ingredients": [
+      "1 can coconut milk",
+      "1 large carrot (sliced)",
+      "1 medium eggplant (cubed)",
+      "1 medium sayote (sliced)",
+      "1 red onion (sliced)",
+      "2 green chili peppers",
+      "3 cloves garlic (minced)",
+      "Fish sauce or salt to taste"
+    ],
+    "instructions": [
+      "Sauté garlic and onion until fragrant.",
+      "Add eggplant, carrot, and sayote.",
+      "Pour in coconut milk and bring to simmer.",
+      "Add chili peppers and cook until vegetables are tender.",
+      "Season with fish sauce or salt.",
+      "Serve with steamed rice."
+    ],
+    "description": "A creamy vegetable dish with a hint of spice, cooked in coconut milk."
+  },
+  {
+    "id": 37,
+    "title": "Ginataang Hipon",
+    "subtitle": "Shrimp cooked in coconut milk",
+    "cookingTime": "30 min",
+    "servings": "4",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Easy",
+    "imageUrl": "img_ginataang_hipon",
+    "isFavorite": false,
+    "ingredients": [
+      "600 g shrimp (trimmed)",
+      "1 tbsp oil",
+      "4 cloves garlic (minced)",
+      "1 onion (sliced)",
+      "1 thumb ginger (sliced)",
+      "2 cups coconut milk",
+      "1/2 cup coconut cream (optional)",
+      "2–3 chilies (optional)",
+      "Fish sauce or salt"
+    ],
+    "instructions": [
+      "Sauté garlic, onion, and ginger.",
+      "Add shrimp; pour coconut milk; add chilies; simmer until pink.",
+      "Add coconut cream (if using); season."
+    ],
+    "description": "Shrimp in creamy coconut sauce with ginger and chilies."
+  },
+  {
+    "id": 38,
+    "title": "Ginataang Kalabasa at Sitaw",
+    "subtitle": "Squash and long beans in coconut milk",
+    "cookingTime": "35 min",
+    "servings": "4–6",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Easy",
+    "imageUrl": "img_ginataang_kalabasa_at_sitaw",
+    "isFavorite": false,
+    "ingredients": [
+      "500 g squash (chunks)",
+      "200 g sitaw/long beans (2-inch cuts)",
+      "1 tbsp oil",
+      "4 cloves garlic (minced)",
+      "1 onion (sliced)",
+      "2 cups coconut milk",
+      "2 chilies (optional)",
+      "Fish sauce or salt"
+    ],
+    "instructions": [
+      "Sauté garlic and onion. Add squash; stir 1–2 minutes.",
+      "Pour coconut milk; simmer until nearly tender.",
+      "Add sitaw (and chilies); cook until vegetables are done. Season to taste."
+    ],
+    "description": "Comforting coconut stew with squash and long beans."
+  },
+  {
+    "id": 39,
+    "title": "Ginataang Langka",
+    "subtitle": "Young jackfruit stewed in coconut milk",
+    "cookingTime": "40 min",
+    "servings": "4–6",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Easy",
+    "imageUrl": "img_ginataang_langka",
+    "isFavorite": false,
+    "ingredients": [
+      "600 g young jackfruit (strips)",
+      "1 tbsp oil",
+      "4 cloves garlic (minced)",
+      "1 onion (sliced)",
+      "1 thumb ginger (sliced)",
+      "2 cups coconut milk",
+      "2–3 chilies (optional)",
+      "Fish sauce or salt"
+    ],
+    "instructions": [
+      "Sauté garlic, onion, and ginger.",
+      "Add jackfruit; toss, then pour coconut milk.",
+      "Simmer until tender; add chilies; season to taste."
+    ],
+    "description": "Young jackfruit stewed in coconut milk with ginger and chilies."
+  },
+  {
+    "id": 40,
+    "title": "Ginisang Ampalaya",
+    "subtitle": "Sautéed bitter melon with egg and tomatoes",
+    "cookingTime": "25 min",
+    "servings": "4",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Easy",
+    "imageUrl": "img_ginisang_ampalaya",
+    "isFavorite": false,
+    "ingredients": [
+      "1 tbsp oil",
+      "4 cloves garlic (minced)",
+      "1 onion (sliced)",
+      "2 tomatoes (chopped)",
+      "ampalaya (2 pcs, sliced)",
+      "Fish sauce/salt and pepper"
+    ],
+    "instructions": [
+      "Sauté garlic and onion (add tomatoes if using) until soft.",
+      "Add ampalaya; cook until just tender. Season and serve."
+    ],
+    "description": "Everyday sautéed vegetable dish with garlic and onions."
+  },
+  {
+    "id": 41,
     "title": "Ginisang Gulay",
     "subtitle": "Traditional Bulacan mixed vegetable stir-fry",
     "cookingTime": "30 min",
-    "servings": "5-6 people",
+    "servings": "5-6",
+    "region": "Bulacan, Central Luzon",
     "difficulty": "Easy",
     "imageUrl": "img_ginisang_gulay",
     "isFavorite": false,
     "ingredients": [
-      "2 medium potatoes (cubed)",
-      "2 large carrots (sliced)",
-      "1 medium chayote (sliced)",
+      "1 inch ginger (julienned)",
       "1 large eggplant (cubed)",
+      "1 medium chayote (sliced)",
       "1 medium radish (sliced)",
       "1 red onion (sliced)",
       "1 white onion (sliced)",
-      "6 cloves garlic (minced)",
-      "1 inch ginger (julienned)",
+      "2 large carrots (sliced)",
+      "2 medium potatoes (cubed)",
       "2 medium tomatoes (chopped)",
       "3 tbsp cooking oil",
+      "6 cloves garlic (minced)",
       "Salt and pepper to taste"
     ],
     "instructions": [
@@ -166,27 +1245,57 @@
     "description": "A healthy and colorful vegetable medley that showcases the fresh produce of Bulacan, perfect as a main dish or side dish."
   },
   {
-    "id": 6,
+    "id": 42,
+    "title": "Ginisang Itlog at Kamatis",
+    "subtitle": "Simple Filipino-style scrambled eggs",
+    "cookingTime": "10 min",
+    "servings": "2-3",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Easy",
+    "imageUrl": "img_scrambled_eggs_tomato",
+    "isFavorite": false,
+    "ingredients": [
+      "1 white onion (chopped)",
+      "3 medium tomatoes (chopped)",
+      "3 tbsp cooking oil",
+      "4 cloves garlic (minced)",
+      "6 eggs (beaten)",
+      "Calamansi for serving",
+      "Salt and pepper to taste"
+    ],
+    "instructions": [
+      "Heat oil in a pan, sauté garlic and onions until fragrant.",
+      "Add tomatoes and cook until soft and mushy.",
+      "Pour in beaten eggs and let sit for 30 seconds.",
+      "Gently scramble eggs with tomato mixture.",
+      "Season with salt and pepper.",
+      "Cook until eggs are set but still creamy.",
+      "Serve hot with rice and calamansi."
+    ],
+    "description": "A simple and delicious egg dish that combines the sweetness of tomatoes with fluffy scrambled eggs, perfect for any meal."
+  },
+  {
+    "id": 43,
     "title": "Ginisang Labanos",
     "subtitle": "Sautéed radish with pork",
     "cookingTime": "30 min",
-    "servings": "3-4 people",
+    "servings": "3-4",
+    "region": "Central Luzon",
     "difficulty": "Easy",
     "imageUrl": "img_ginisang_labanos",
     "isFavorite": false,
-    "region": "Central Luzon",
     "ingredients": [
-      "2 large radishes (sliced)",
-      "200g pork belly or ground pork",
-      "4 cloves garlic (minced)",
-      "1 red onion (sliced)",
-      "2 medium tomatoes (chopped)",
       "1 inch ginger (julienned)",
-      "3 tbsp cooking oil",
+      "1 red onion (sliced)",
       "1 tbsp fish sauce",
+      "1/2 cup water",
       "1/4 tsp ground black pepper",
-      "Salt to taste",
-      "1/2 cup water"
+      "2 large radishes (sliced)",
+      "2 medium tomatoes (chopped)",
+      "200g pork belly or ground pork",
+      "3 tbsp cooking oil",
+      "4 cloves garlic (minced)",
+      "Salt to taste"
     ],
     "instructions": [
       "Heat oil in a pan over medium heat.",
@@ -201,22 +1310,122 @@
     "description": "A hearty vegetable dish featuring tender radish sautéed with garlic, tomatoes, and savory pork."
   },
   {
-    "id": 7,
+    "id": 44,
+    "title": "Ginisang Langka",
+    "subtitle": "Hearty and flavorful young jackfruit dish",
+    "cookingTime": "35 min",
+    "servings": "3-4",
+    "region": "CALABARZON",
+    "difficulty": "Medium",
+    "imageUrl": "img_ginisang_langka",
+    "isFavorite": false,
+    "ingredients": [
+      "2 cups young jackfruit (langka), shredded",
+      "1 medium onion (sliced)",
+      "3 cloves garlic (minced)",
+      "1 medium tomato (chopped)",
+      "2 tbsp cooking oil",
+      "1 tbsp fish sauce (optional)",
+      "1 cup coconut milk (optional, for creamier version)",
+      "Salt and pepper to taste"
+    ],
+    "instructions": [
+      "Heat oil in a pan, sauté garlic, onion, and tomato until softened.",
+      "Add shredded young jackfruit and stir-fry for a few minutes.",
+      "Pour in fish sauce (if using) and mix well.",
+      "Add a little water (or coconut milk for creamier flavor) and simmer until jackfruit is tender.",
+      "Season with salt and pepper to taste.",
+      "Serve hot with rice."
+    ],
+    "description": "A savory Filipino dish made with young jackfruit, sautéed with aromatics, and optionally cooked in coconut milk for a richer taste."
+  },
+  {
+    "id": 45,
+    "title": "Ginisang Pechay",
+    "subtitle": "Sautéed bok choy with garlic and onions",
+    "cookingTime": "25 min",
+    "servings": "4",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Easy",
+    "imageUrl": "img_ginisang_pechay",
+    "isFavorite": false,
+    "ingredients": [
+      "1 tbsp oil",
+      "4 cloves garlic (minced)",
+      "1 onion (sliced)",
+      "pechay/bok choy (1 bunch, chopped)",
+      "Fish sauce/salt and pepper"
+    ],
+    "instructions": [
+      "Sauté garlic and onion (add tomatoes if using) until soft.",
+      "Add pechay/bok choy; cook until just tender. Season and serve."
+    ],
+    "description": "Everyday sautéed vegetable dish with garlic and onions."
+  },
+  {
+    "id": 46,
+    "title": "Ginisang Puso ng Saging",
+    "subtitle": "Banana blossom sautéed with aromatics and coconut milk",
+    "cookingTime": "25 min",
+    "servings": "4",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Easy",
+    "imageUrl": "img_ginisang_puso_ng_saging",
+    "isFavorite": false,
+    "ingredients": [
+      "1 tbsp oil",
+      "4 cloves garlic (minced)",
+      "1 onion (sliced)",
+      "banana blossom (1 head, thinly sliced)",
+      "Fish sauce/salt and pepper"
+    ],
+    "instructions": [
+      "Sauté garlic and onion (add tomatoes if using) until soft.",
+      "Add banana blossom; cook until just tender. Season and serve."
+    ],
+    "description": "Everyday sautéed vegetable dish with garlic and onions."
+  },
+  {
+    "id": 47,
+    "title": "Ginisang Repolyo",
+    "subtitle": "Sautéed cabbage with carrots and ground pork",
+    "cookingTime": "25 min",
+    "servings": "4",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Easy",
+    "imageUrl": "img_ginisang_repolyo",
+    "isFavorite": false,
+    "ingredients": [
+      "1 tbsp oil",
+      "4 cloves garlic (minced)",
+      "1 onion (sliced)",
+      "cabbage (1/2 head, shredded)",
+      "Fish sauce/salt and pepper"
+    ],
+    "instructions": [
+      "Sauté garlic and onion (add tomatoes if using) until soft.",
+      "Add cabbage; cook until just tender. Season and serve."
+    ],
+    "description": "Everyday sautéed vegetable dish with garlic and onions."
+  },
+  {
+    "id": 48,
     "title": "Ginisang Sayote",
     "subtitle": "Sautéed chayote with eggs",
     "cookingTime": "20 min",
-    "servings": "4 people",
+    "servings": "4",
+    "region": "Central Luzon & Cordillera",
     "difficulty": "Easy",
     "imageUrl": "img_ginisang_sayote",
     "isFavorite": false,
     "ingredients": [
-      "3 medium chayote (sliced thin)",
-      "3 eggs (beaten)",
-      "4 cloves garlic (minced)",
+      "1 inch ginger (julienned)",
       "1 red onion (sliced)",
       "2 medium tomatoes (chopped)",
-      "1 inch ginger (julienned)",
+      "3 eggs (beaten)",
+      "3 medium chayote (sliced thin)",
       "3 tbsp cooking oil",
+      "4 cloves garlic (minced)",
       "Salt and pepper to taste"
     ],
     "instructions": [
@@ -232,25 +1441,128 @@
     "description": "A simple and healthy vegetable dish featuring tender chayote sautéed with aromatics and finished with scrambled eggs."
   },
   {
-    "id": 8,
+    "id": 49,
+    "title": "Ginisang Sitaw",
+    "subtitle": "Sautéed string beans with garlic and tomatoes",
+    "cookingTime": "25 min",
+    "servings": "4",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Easy",
+    "imageUrl": "img_ginisang_sitaw",
+    "isFavorite": false,
+    "ingredients": [
+      "1 tbsp oil",
+      "4 cloves garlic (minced)",
+      "1 onion (sliced)",
+      "2 tomatoes (chopped)",
+      "string beans (400 g, 2-inch cuts)",
+      "Fish sauce/salt and pepper"
+    ],
+    "instructions": [
+      "Sauté garlic and onion (add tomatoes if using) until soft.",
+      "Add string beans; cook until just tender. Season and serve."
+    ],
+    "description": "Everyday sautéed vegetable dish with garlic and onions."
+  },
+  {
+    "id": 50,
+    "title": "Ginisang Togue",
+    "subtitle": "Sautéed mung bean sprouts with tofu and pork",
+    "cookingTime": "25 min",
+    "servings": "4",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Easy",
+    "imageUrl": "img_ginisang_togue",
+    "isFavorite": false,
+    "ingredients": [
+      "1 tbsp oil",
+      "4 cloves garlic (minced)",
+      "1 onion (sliced)",
+      "mung bean sprouts (200 g)",
+      "Fish sauce/salt and pepper"
+    ],
+    "instructions": [
+      "Sauté garlic and onion (add tomatoes if using) until soft.",
+      "Add mung bean sprouts; cook until just tender. Season and serve."
+    ],
+    "description": "Everyday sautéed vegetable dish with garlic and onions."
+  },
+  {
+    "id": 51,
+    "title": "Gising-Gising",
+    "subtitle": "Spicy green beans in coconut milk",
+    "cookingTime": "30 min",
+    "servings": "4",
+    "region": "Bicol",
+    "difficulty": "Easy",
+    "imageUrl": "img_gising_gising",
+    "isFavorite": false,
+    "ingredients": [
+      "1 tbsp oil",
+      "4 cloves garlic (minced)",
+      "1 onion (sliced)",
+      "400 g green beans (finely chopped)",
+      "200 g ground pork (optional)",
+      "1–2 cups coconut milk",
+      "2–4 chilies (sliced)",
+      "1 tbsp shrimp paste or fish sauce",
+      "Pepper"
+    ],
+    "instructions": [
+      "Sauté garlic and onion; add pork if using and cook until lightly browned.",
+      "Stir in chopped beans and chilies. Pour coconut milk and simmer until beans are tender-crisp.",
+      "Season with shrimp paste/fish sauce and pepper."
+    ],
+    "description": "Spicy coconut milk dish of chopped beans."
+  },
+  {
+    "id": 52,
+    "title": "Goto",
+    "subtitle": "Beef tripe congee with ginger and garlic",
+    "cookingTime": "90 min",
+    "servings": "5–6",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Easy",
+    "imageUrl": "img_goto",
+    "isFavorite": false,
+    "ingredients": [
+      "1 cup glutinous rice (rinsed)",
+      "8 cups water/broth",
+      "1 tbsp oil",
+      "1 thumb ginger (julienned)",
+      "4 cloves garlic (minced)",
+      "1 onion (chopped)",
+      "300 g beef tripe and/or ox tripe (pre-boiled, sliced)",
+      "Fish sauce and pepper to taste",
+      "Calamansi and toasted garlic for serving"
+    ],
+    "instructions": [
+      "Sauté ginger, garlic, and onion in oil. Add rice; stir 1 minute.",
+      "Pour water/broth; simmer, stirring occasionally, until porridge is thick.",
+      "Add tripe; simmer until tender. Season with fish sauce and pepper. Serve with calamansi and toasted garlic."
+    ],
+    "description": "Ginger-forward rice porridge with tripe."
+  },
+  {
+    "id": 53,
     "title": "Hamon Bulakenya",
     "subtitle": "One of the food served during the Liberation of Bulacan Province",
-    "cookingTime": "3 days + 2 hours",
-    "region": "Bulacan",
-    "servings": "8-10 people",
+    "cookingTime": "3 hours",
+    "servings": "8-10",
+    "region": "Bulacan, Central Luzon",
     "difficulty": "Hard",
     "imageUrl": "img_hamon_bulakenya",
     "isFavorite": false,
     "ingredients": [
-      "1 kilo pork liempo (deboned and skinned)",
-      "4 tbsp sugar",
-      "2 tbsp salt",
-      "1 tbsp prague powder",
-      "1 cup pineapple juice",
-      "½ cup brown sugar",
       "1 cup pale pilsen beer",
+      "1 cup pineapple juice",
+      "1 kilo pork liempo (deboned and skinned)",
+      "1 tbsp prague powder",
       "2 pcs star anise",
-      "extra sugar"
+      "2 tbsp salt",
+      "4 tbsp sugar",
+      "extra sugar",
+      "½ cup brown sugar"
     ],
     "instructions": [
       "Prick all sides of the meat very well.",
@@ -264,28 +1576,232 @@
     "description": "A traditional Bulacan heritage recipe served during the Liberation of Bulacan Province, featuring cured pork with a caramelized sugar coating."
   },
   {
-    "id": 9,
+    "id": 54,
+    "title": "Inihaw na Baboy",
+    "subtitle": "Filipino pork barbecue skewers",
+    "cookingTime": "45 min",
+    "servings": "4-6",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Easy",
+    "imageUrl": "img_inihaw_na_baboy",
+    "isFavorite": false,
+    "ingredients": [
+      "1 kg pork shoulder or liempo (sliced into 1/2-inch thick pieces)",
+      "6 cloves garlic (minced)",
+      "1 red onion (sliced, for serving)",
+      "1/4 cup calamansi juice",
+      "1/4 cup soy sauce",
+      "2 tbsp brown sugar",
+      "1 tsp ground black pepper",
+      "2 tbsp banana ketchup (optional, for basting)",
+      "1 tbsp cooking oil",
+      "Salt to taste"
+    ],
+    "instructions": [
+      "In a bowl, whisk calamansi juice, soy sauce, garlic, brown sugar, pepper, and a pinch of salt.",
+      "Add pork and massage marinade. Cover and marinate 1–3 hours (overnight best).",
+      "Preheat grill to medium-high. Shake off excess marinade; reserve the rest for basting.",
+      "Grill pork 3–4 minutes per side, basting with reserved marinade mixed with oil (and banana ketchup if using) until lightly charred and cooked through.",
+      "Rest 5 minutes. Slice and serve with red onion and a dipping sauce of calamansi and soy."
+    ],
+    "description": "A home-style Filipino dish: Inihaw na Baboy."
+  },
+  {
+    "id": 55,
+    "title": "Inihaw na Bangus",
+    "subtitle": "Grilled milkfish stuffed with tomatoes and onions",
+    "cookingTime": "45 min",
+    "servings": "4-6",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Easy",
+    "imageUrl": "img_inihaw_na_bangus",
+    "isFavorite": false,
+    "ingredients": [
+      "1 large bangus (milkfish), butterflied and deboned",
+      "2 medium tomatoes (chopped)",
+      "1 red onion (chopped)",
+      "2 inches ginger (minced)",
+      "4 cloves garlic (minced)",
+      "2 tbsp calamansi juice",
+      "1 tbsp cooking oil",
+      "Salt and pepper to taste"
+    ],
+    "instructions": [
+      "In a bowl, combine tomatoes, red onion, ginger, and garlic. Season with salt and pepper.",
+      "Season fish with salt and pepper, drizzle with calamansi juice and a little oil.",
+      "Stuff the fish cavity with the tomato–onion mixture. Wrap in banana leaf and/or foil to secure.",
+      "Grill over medium heat 8–10 minutes per side until fish is cooked through and flakes easily.",
+      "Unwrap and serve hot with calamansi–soy dip."
+    ],
+    "description": "A home-style Filipino dish: Inihaw na Bangus."
+  },
+  {
+    "id": 56,
+    "title": "Inihaw na Liempo",
+    "subtitle": "Grilled pork belly with calamansi-soy marinade",
+    "cookingTime": "45 min",
+    "servings": "4-6",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Easy",
+    "imageUrl": "img_inihaw_na_liempo",
+    "isFavorite": false,
+    "ingredients": [
+      "1 kg pork belly (liempo), slab or thick slices",
+      "8 cloves garlic (minced)",
+      "1/3 cup calamansi juice",
+      "1/3 cup soy sauce",
+      "2 tbsp brown sugar",
+      "1 tsp ground black pepper",
+      "1 tbsp fish sauce (optional)",
+      "2 tbsp banana ketchup (for basting, optional)",
+      "1 tbsp cooking oil",
+      "Salt to taste"
+    ],
+    "instructions": [
+      "Combine calamansi juice, soy sauce, garlic, sugar, pepper, and fish sauce (if using).",
+      "Marinate liempo 3–8 hours, chilled. Bring to room temp 20 minutes before grilling.",
+      "Preheat grill to medium. Pat meat dry. Reserve marinade for basting.",
+      "Grill 5–7 minutes per side, basting with marinade mixed with oil (and ketchup if using) until caramelized and cooked through.",
+      "Rest 10 minutes. Slice and serve with calamansi–soy dip."
+    ],
+    "description": "A home-style Filipino dish: Inihaw na Liempo."
+  },
+  {
+    "id": 57,
+    "title": "Inihaw na Manok",
+    "subtitle": "Filipino grilled chicken with garlic marinade",
+    "cookingTime": "45 min",
+    "servings": "4-6",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Easy",
+    "imageUrl": "img_inihaw_na_manok",
+    "isFavorite": false,
+    "ingredients": [
+      "1.2 kg chicken leg quarters or breast fillets",
+      "6 cloves garlic (minced)",
+      "2 inches ginger (grated)",
+      "1/4 cup calamansi juice",
+      "1/4 cup soy sauce",
+      "2 tbsp brown sugar or honey",
+      "1 tsp ground black pepper",
+      "2 tbsp banana ketchup (optional, for color)",
+      "1 tbsp cooking oil",
+      "Salt to taste"
+    ],
+    "instructions": [
+      "Whisk calamansi, soy sauce, garlic, ginger, sugar, and pepper. Add chicken and coat well.",
+      "Marinate 2–6 hours. Preheat grill to medium.",
+      "Grill chicken skin-side down 6–8 minutes, then flip. Baste with remaining marinade mixed with oil (and ketchup if using).",
+      "Continue grilling until juices run clear and internal temp reaches 74°C (165°F).",
+      "Rest 5 minutes. Serve with calamansi and sliced red onion."
+    ],
+    "description": "A home-style Filipino dish: Inihaw na Manok."
+  },
+  {
+    "id": 58,
+    "title": "Inihaw na Pusit",
+    "subtitle": "Grilled stuffed squid with tomatoes and onions",
+    "cookingTime": "45 min",
+    "servings": "4-6",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Easy",
+    "imageUrl": "img_inihaw_na_pusit",
+    "isFavorite": false,
+    "ingredients": [
+      "1 kg medium squid, cleaned (reserve tentacles)",
+      "2 medium tomatoes (chopped)",
+      "1 red onion (chopped)",
+      "2 inches ginger (minced)",
+      "4 cloves garlic (minced)",
+      "1/4 cup calamansi juice",
+      "2 tbsp soy sauce",
+      "1 tbsp cooking oil",
+      "Salt and pepper to taste"
+    ],
+    "instructions": [
+      "Whisk calamansi juice, soy sauce, garlic, ginger, oil, salt, and pepper. Toss squid and marinate 15–30 minutes.",
+      "Mix tomatoes and red onion; season lightly. Stuff squid bodies with the mixture and secure openings with toothpicks.",
+      "Preheat grill to high. Grill squid 1–2 minutes per side just until opaque and lightly charred (avoid overcooking).",
+      "Serve immediately with extra calamansi on the side."
+    ],
+    "description": "A home-style Filipino dish: Inihaw na Pusit."
+  },
+  {
+    "id": 59,
+    "title": "Kadyos, Baboy, Langka (KBL)",
+    "subtitle": "Ilonggo soup with pigeon peas, pork, and jackfruit",
+    "cookingTime": "120 min",
+    "servings": "5–6",
+    "region": "Western Visayas",
+    "difficulty": "Medium",
+    "imageUrl": "img_kadyos_baboy_langka_kbl",
+    "isFavorite": false,
+    "ingredients": [
+      "500 g pork ribs",
+      "1 cup kadyos (pigeon peas), pre-soaked or canned",
+      "300 g young jackfruit (chunks)",
+      "1 small onion (quartered)",
+      "1 thumb ginger (sliced)",
+      "6 cups water",
+      "2–3 batwan or 4–6 kamias (to sour)",
+      "Salt and pepper"
+    ],
+    "instructions": [
+      "Combine pork, kadyos, ginger, onion, and water; simmer until pork is tender.",
+      "Add jackfruit and batwan/kamias; simmer until jackfruit is soft.",
+      "Season with salt and pepper."
+    ],
+    "description": "Hearty Ilonggo soup of peas, pork, and jackfruit with a sour note."
+  },
+  {
+    "id": 60,
+    "title": "Kansi",
+    "subtitle": "Ilonggo beef shank soup with sour broth",
+    "cookingTime": "3 hours",
+    "servings": "5–6",
+    "region": "Western Visayas",
+    "difficulty": "Medium",
+    "imageUrl": "img_kansi",
+    "isFavorite": false,
+    "ingredients": [
+      "1.5 kg beef shank",
+      "1 onion (quartered)",
+      "1 thumb ginger (smashed)",
+      "6–8 cups water",
+      "Batwan/kamias (to taste)",
+      "Salt, fish sauce, and pepper"
+    ],
+    "instructions": [
+      "Simmer beef shank with onion and ginger until tender.",
+      "Add batwan/kamias for sourness; season with salt/fish sauce and pepper.",
+      "Serve hot."
+    ],
+    "description": "Bacolod-style sour beef shank soup."
+  },
+  {
+    "id": 61,
     "title": "Kare-Kare",
     "subtitle": "Filipino oxtail stew with peanut sauce",
-    "cookingTime": "2.5 hours",
-    "servings": "6-8 people",
+    "cookingTime": "2 hours",
+    "servings": "6-8",
+    "region": "Central Luzon & NCR",
     "difficulty": "Hard",
     "imageUrl": "img_kare_kare",
     "isFavorite": false,
     "ingredients": [
-      "2 lbs oxtail (cut into pieces)",
-      "1 lb beef tripe (cleaned and sliced)",
-      "1 bundle string beans (cut into 2-inch pieces)",
-      "1 large eggplant (sliced)",
       "1 bunch bok choy",
+      "1 bundle string beans (cut into 2-inch pieces)",
       "1 cup ground peanuts",
-      "1/4 cup rice flour",
-      "1/4 cup annatto oil",
+      "1 large eggplant (sliced)",
       "1 large onion (chopped)",
+      "1 lb beef tripe (cleaned and sliced)",
+      "1/4 cup annatto oil",
+      "1/4 cup rice flour",
+      "2 lbs oxtail (cut into pieces)",
       "6 cloves garlic (minced)",
       "8 cups water",
-      "Salt to taste",
-      "Bagoong (shrimp paste) for serving"
+      "Bagoong (shrimp paste) for serving",
+      "Salt to taste"
     ],
     "instructions": [
       "Boil oxtail and tripe in water for 2 hours until tender.",
@@ -301,25 +1817,362 @@
     "description": "A rich and creamy Filipino stew featuring oxtail and vegetables in a thick peanut sauce, traditionally served with bagoong."
   },
   {
-    "id": 10,
+    "id": 62,
+    "title": "Kinilaw na Tuna",
+    "subtitle": "Filipino-style fish ceviche with calamansi and ginger",
+    "cookingTime": "30 min (marinating)",
+    "servings": "4",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Easy",
+    "imageUrl": "img_kinilaw_na_tuna",
+    "isFavorite": false,
+    "ingredients": [
+      "600 g fresh tuna (cubes)",
+      "1/2 cup cane vinegar",
+      "1/4 cup calamansi juice",
+      "1 thumb ginger (julienned)",
+      "1 small red onion (sliced)",
+      "1–2 chilies (sliced)",
+      "Salt & pepper"
+    ],
+    "instructions": [
+      "Rinse tuna quickly; drain well. Toss with ginger, onion, and chilies.",
+      "Pour vinegar and calamansi; season with salt and pepper. Marinate 10–15 minutes; serve immediately."
+    ],
+    "description": "Fresh tuna cured in vinegar/calamansi with ginger and onions."
+  },
+  {
+    "id": 63,
+    "title": "La Paz Batchoy",
+    "subtitle": "Iloilo noodle soup with pork and crushed chicharron",
+    "cookingTime": "90 min",
+    "servings": "4–6",
+    "region": "Iloilo, Western Visayas",
+    "difficulty": "Medium",
+    "imageUrl": "img_la_paz_batchoy",
+    "isFavorite": false,
+    "ingredients": [
+      "1 tbsp oil",
+      "6 cloves garlic (minced, plus extra for topping)",
+      "1 onion (chopped)",
+      "500 g pork bones/offal (optional)",
+      "200 g pork strips",
+      "6–8 cups broth/water",
+      "Fresh miki/egg noodles",
+      "Fish sauce, salt, pepper",
+      "Chicharrón and spring onions (toppings)",
+      "Boiled egg (optional)"
+    ],
+    "instructions": [
+      "Sauté garlic and onion; add pork and bones; pour broth and simmer for flavor.",
+      "Season to taste. Blanch noodles in boiling broth.",
+      "Assemble bowls; top with pork, broth, chicharrón, spring onions, and toasted garlic (and egg)."
+    ],
+    "description": "Rich noodle soup with porky broth and toppings."
+  },
+  {
+    "id": 64,
+    "title": "Laing",
+    "subtitle": "Taro leaves stewed in coconut milk and chilies",
+    "cookingTime": "60 min",
+    "servings": "4–6",
+    "region": "Bicol",
+    "difficulty": "Easy",
+    "imageUrl": "img_laing",
+    "isFavorite": false,
+    "ingredients": [
+      "2 cups coconut milk",
+      "1/2 cup coconut cream (optional)",
+      "1 onion (sliced)",
+      "4 cloves garlic (minced)",
+      "1 thumb ginger (sliced)",
+      "2–3 chilies",
+      "3 cups dried taro leaves",
+      "Dried fish/shrimp (optional)",
+      "Salt/fish sauce"
+    ],
+    "instructions": [
+      "Simmer coconut milk with onion, garlic, ginger, and chilies for 5 minutes.",
+      "Add taro leaves (do not stir initially); simmer gently until tender and most liquid is absorbed.",
+      "Stir in coconut cream if using; season to taste."
+    ],
+    "description": "Dried taro leaves stewed in coconut milk with chilies."
+  },
+  {
+    "id": 65,
+    "title": "Lechon Kawali",
+    "subtitle": "Crispy pan-fried pork belly",
+    "cookingTime": "3 hours",
+    "servings": "5–6",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Medium",
+    "imageUrl": "img_lechon_kawali",
+    "isFavorite": false,
+    "ingredients": [
+      "1.2 kg pork belly (slab)",
+      "1 head garlic (crushed)",
+      "1 onion (quartered)",
+      "1 tbsp peppercorns",
+      "3 bay leaves",
+      "2 tbsp salt (for simmering)",
+      "Water to cover",
+      "Oil for deep frying"
+    ],
+    "instructions": [
+      "Simmer pork belly with aromatics until tender. Drain and dry completely.",
+      "Chill uncovered to dry the skin (2–4 hours).",
+      "Deep-fry carefully at 175–180°C until skin is blistered and crisp. Rest and chop; serve with sawsawan."
+    ],
+    "description": "Crispy pan-fried pork belly, tender inside and crunchy outside."
+  },
+  {
+    "id": 66,
+    "title": "Lomi",
+    "subtitle": "Thick egg noodle soup with meat and vegetables",
+    "cookingTime": "40 min",
+    "servings": "4–6",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Easy",
+    "imageUrl": "img_lomi",
+    "isFavorite": false,
+    "ingredients": [
+      "1 tbsp oil",
+      "4 cloves garlic (minced)",
+      "1 onion (chopped)",
+      "200 g pork/chicken (strips)",
+      "1.5 L chicken broth",
+      "500 g fresh lomi noodles",
+      "1 small carrot (julienned)",
+      "1 egg (beaten)",
+      "1 tbsp cornstarch in 2 tbsp water",
+      "Fish sauce/soy sauce, pepper"
+    ],
+    "instructions": [
+      "Sauté garlic and onion; add meat. Pour broth and bring to a boil.",
+      "Add noodles and carrot; cook until tender. Thicken with cornstarch slurry.",
+      "Drizzle in beaten egg while stirring; season to taste."
+    ],
+    "description": "Hearty thick egg noodle soup with egg-drop."
+  },
+  {
+    "id": 67,
+    "title": "Lumpiang Shanghai",
+    "subtitle": "Crispy pork spring rolls with carrots",
+    "cookingTime": "60 min",
+    "servings": "6–8",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Easy",
+    "imageUrl": "img_lumpiang_shanghai",
+    "isFavorite": false,
+    "ingredients": [
+      "500 g ground pork",
+      "1 small carrot (finely grated)",
+      "1 small onion (minced)",
+      "4 cloves garlic (minced)",
+      "1 egg",
+      "1/2 cup breadcrumbs",
+      "1 tsp salt",
+      "1/2 tsp pepper",
+      "Lumpia wrappers",
+      "Oil for frying"
+    ],
+    "instructions": [
+      "Mix pork, carrot, onion, garlic, egg, breadcrumbs, salt, and pepper.",
+      "Wrap in lumpia wrappers; seal with water. Fry until golden and crisp."
+    ],
+    "description": "Crispy pork spring rolls with carrots."
+  },
+  {
+    "id": 68,
+    "title": "Lumpiang Togue",
+    "subtitle": "Vegetable spring rolls with bean sprouts",
+    "cookingTime": "45 min",
+    "servings": "6–8",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Easy",
+    "imageUrl": "img_lumpiang_togue",
+    "isFavorite": false,
+    "ingredients": [
+      "1 tbsp oil",
+      "4 cloves garlic (minced)",
+      "1 onion (sliced)",
+      "200 g togue (mung bean sprouts)",
+      "1 small carrot (matchsticks)",
+      "100 g cabbage (shredded)",
+      "1 tbsp soy sauce or fish sauce",
+      "Lumpia wrappers",
+      "Oil for frying"
+    ],
+    "instructions": [
+      "Sauté garlic and onion; add vegetables; season and cook briefly until just wilted. Cool.",
+      "Wrap in lumpia wrappers; fry until golden."
+    ],
+    "description": "Vegetable lumpia packed with bean sprouts."
+  },
+  {
+    "id": 69,
+    "title": "Mechado",
+    "subtitle": "Soy-tomato braised beef with potatoes",
+    "cookingTime": "90 minutes",
+    "servings": "4–6",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Medium",
+    "imageUrl": "img_mechado",
+    "isFavorite": false,
+    "ingredients": [
+      "1 kg beef cubes",
+      "2 tbsp oil",
+      "6 cloves garlic (minced)",
+      "1 onion (chopped)",
+      "1 cup tomato sauce",
+      "2 tbsp soy sauce",
+      "2 cups broth",
+      "2 potatoes (cubed)",
+      "1 bell pepper (optional)",
+      "Salt & pepper"
+    ],
+    "instructions": [
+      "Brown beef; sauté garlic and onion. Add tomato sauce, soy, and broth; simmer until tender.",
+      "Add potatoes (and bell pepper); cook until tender. Season to taste."
+    ],
+    "description": "Soy-tomato braised beef with potatoes."
+  },
+  {
+    "id": 70,
+    "title": "Menudo",
+    "subtitle": "Pork and liver stew with potatoes and carrots",
+    "cookingTime": "60 min",
+    "servings": "4–6",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Easy",
+    "imageUrl": "img_menudo",
+    "isFavorite": false,
+    "ingredients": [
+      "700 g pork (cubes)",
+      "200 g pork liver (optional, cubes)",
+      "2 tbsp oil",
+      "6 cloves garlic (minced)",
+      "1 onion (chopped)",
+      "1 cup tomato sauce",
+      "2 cups broth",
+      "2 potatoes (cubed)",
+      "1 large carrot (diced)",
+      "1/2 cup green peas",
+      "Salt & pepper"
+    ],
+    "instructions": [
+      "Sauté garlic and onion; add pork and cook until no longer pink.",
+      "Pour tomato sauce and broth; simmer until tender.",
+      "Add potatoes, carrots, and peas. Stir in liver last; cook 3–5 minutes. Season."
+    ],
+    "description": "Pork and liver stew with potatoes, carrots, and peas."
+  },
+  {
+    "id": 71,
+    "title": "Molo Soup (Pancit Molo)",
+    "subtitle": "Ilonggo wonton soup with aromatics",
+    "cookingTime": "60 min",
+    "servings": "4–6",
+    "region": "Iloilo, Western Visayas",
+    "difficulty": "Easy",
+    "imageUrl": "img_molo_soup_pancit_molo",
+    "isFavorite": false,
+    "ingredients": [
+      "300 g ground pork",
+      "100 g shrimp (minced)",
+      "2 cloves garlic (minced)",
+      "1 small onion (minced)",
+      "1 egg",
+      "Salt & pepper",
+      "Wonton wrappers",
+      "1 tbsp oil",
+      "4 cloves garlic (minced)",
+      "1 onion (chopped)",
+      "6–8 cups chicken broth",
+      "Spring onions for garnish"
+    ],
+    "instructions": [
+      "Mix filling; wrap into wontons.",
+      "Sauté garlic and onion; pour broth and bring to a boil.",
+      "Drop in wontons; cook until wrappers are tender. Garnish and serve."
+    ],
+    "description": "Pancit Molo—wonton soup with pork-shrimp filling."
+  },
+  {
+    "id": 72,
+    "title": "Monggo Guisado (Ginisang Munggo)",
+    "subtitle": "Mung bean stew with pork and chicharron",
+    "cookingTime": "60 min",
+    "servings": "4–6",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Easy",
+    "imageUrl": "img_monggo_guisado_ginisang_munggo",
+    "isFavorite": false,
+    "ingredients": [
+      "1 cup mung beans (rinsed)",
+      "8 cups water/broth",
+      "1 tbsp oil",
+      "4 cloves garlic (minced)",
+      "1 onion (chopped)",
+      "2 tomatoes (chopped)",
+      "100 g pork/shrimp (optional)",
+      "Ampalaya leaves or spinach (handful)",
+      "Fish sauce/salt and pepper"
+    ],
+    "instructions": [
+      "Boil mung beans until tender.",
+      "Sauté garlic, onion, and tomatoes; add pork/shrimp if using.",
+      "Combine with cooked beans; season to taste. Stir in leaves just before serving."
+    ],
+    "description": "Comforting mung bean stew; often topped with chicharrón."
+  },
+  {
+    "id": 73,
+    "title": "Nilagang Baboy",
+    "subtitle": "Pork soup with potatoes and vegetables",
+    "cookingTime": "90 min",
+    "servings": "4–6",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Easy",
+    "imageUrl": "img_nilagang_baboy",
+    "isFavorite": false,
+    "ingredients": [
+      "1 kg pork ribs/belly (chunks)",
+      "1 onion (quartered)",
+      "6 cups water",
+      "2 potatoes (quartered)",
+      "Corn (optional)",
+      "Leafy greens (pechay/cabbage)",
+      "Salt, pepper, fish sauce"
+    ],
+    "instructions": [
+      "Simmer pork with onion until tender; skim impurities.",
+      "Add potatoes (and corn if using); cook until tender.",
+      "Season; add greens just before serving."
+    ],
+    "description": "Clear pork soup with potatoes and vegetables."
+  },
+  {
+    "id": 74,
     "title": "Nilagang Baka",
     "subtitle": "Filipino beef soup with vegetables",
     "cookingTime": "2 hours",
-    "servings": "6-8 people",
+    "servings": "6-8",
+    "region": "Nationwide (Philippines)",
     "difficulty": "Easy",
     "imageUrl": "img_nilagang_baka",
     "isFavorite": false,
     "ingredients": [
       "1 kg beef brisket or short ribs",
-      "3 medium potatoes (quartered)",
-      "2 large carrots (cut into chunks)",
       "1 medium radish (sliced thick)",
       "1 white onion (quartered)",
-      "6 cloves garlic (crushed)",
       "2 inches ginger (sliced)",
+      "2 large carrots (cut into chunks)",
+      "3 medium potatoes (quartered)",
+      "6 cloves garlic (crushed)",
       "8 cups water",
-      "Salt and pepper to taste",
-      "Fish sauce to taste"
+      "Fish sauce to taste",
+      "Salt and pepper to taste"
     ],
     "instructions": [
       "Place beef in a large pot with water, bring to a boil.",
@@ -333,23 +2186,341 @@
     "description": "A hearty Filipino beef soup with tender vegetables in a clear, flavorful broth that's perfect for family meals."
   },
   {
-    "id": 11,
+    "id": 75,
+    "title": "Paksiw na Isda",
+    "subtitle": "Fish stewed in vinegar and vegetables",
+    "cookingTime": "30 min",
+    "servings": "3-4",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Easy",
+    "imageUrl": "img_paksiw_isda",
+    "isFavorite": false,
+    "ingredients": [
+      "1 lb fish (tilapia or bangus, cleaned)",
+      "1 medium eggplant (sliced)",
+      "1 red onion (sliced)",
+      "1/2 cup water",
+      "1/4 cup vinegar",
+      "2 medium tomatoes (quartered)",
+      "2 pcs long green chili",
+      "4 cloves garlic (crushed)",
+      "Salt and pepper to taste"
+    ],
+    "instructions": [
+      "Layer fish, tomatoes, eggplant, onion, and garlic in a pot.",
+      "Pour vinegar and water over the ingredients.",
+      "Season with salt and pepper.",
+      "Cover and simmer on low heat for 20 minutes until fish is cooked.",
+      "Serve hot with steamed rice."
+    ],
+    "description": "A tangy Filipino fish dish simmered in vinegar, aromatics, and vegetables."
+  },
+  {
+    "id": 76,
+    "title": "Pancit Bihon",
+    "subtitle": "Stir-fried rice noodles with chicken and vegetables",
+    "cookingTime": "35 min",
+    "servings": "4–6",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Easy",
+    "imageUrl": "img_pancit_bihon",
+    "isFavorite": false,
+    "ingredients": [
+      "250 g bihon (rice noodles), soaked",
+      "2 tbsp oil",
+      "4 cloves garlic (minced)",
+      "1 onion (sliced)",
+      "200 g chicken/pork (shreds)",
+      "2 cups stock",
+      "1 small carrot (julienned)",
+      "1 cup cabbage (shredded)",
+      "2 tbsp soy sauce",
+      "1 tbsp fish sauce",
+      "Pepper",
+      "Calamansi to serve"
+    ],
+    "instructions": [
+      "Sauté garlic and onion; add meat and stock.",
+      "Add soaked bihon; toss until noodles absorb liquid.",
+      "Stir in carrots and cabbage; season. Serve with calamansi."
+    ],
+    "description": "Rice noodles stir-fried with meat and vegetables."
+  },
+  {
+    "id": 77,
+    "title": "Pancit Canton",
+    "subtitle": "Stir-fried egg noodles with meat and vegetables",
+    "cookingTime": "35 min",
+    "servings": "4–6",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Easy",
+    "imageUrl": "img_pancit_canton",
+    "isFavorite": false,
+    "ingredients": [
+      "300 g canton (egg noodles)",
+      "2 tbsp oil",
+      "4 cloves garlic (minced)",
+      "1 onion (sliced)",
+      "200 g meat/seafood mix",
+      "2 cups stock",
+      "Assorted vegetables (carrots, cabbage, sayote)",
+      "2 tbsp soy sauce",
+      "1 tbsp oyster sauce",
+      "Pepper",
+      "Calamansi"
+    ],
+    "instructions": [
+      "Sauté aromatics; add meat/seafood. Pour stock and sauces.",
+      "Add noodles; toss as it absorbs. Add vegetables; season and serve with calamansi."
+    ],
+    "description": "Egg noodles tossed with meat, vegetables, and savory sauce."
+  },
+  {
+    "id": 78,
+    "title": "Pancit Habhab",
+    "subtitle": "Lucban miki noodles served on banana leaf",
+    "cookingTime": "30 min",
+    "servings": "4–6",
+    "region": "Quezon, CALABARZON",
+    "difficulty": "Easy",
+    "imageUrl": "img_pancit_habhab",
+    "isFavorite": false,
+    "ingredients": [
+      "300 g Lucban miki noodles (or canton)",
+      "2 tbsp oil",
+      "4 cloves garlic (minced)",
+      "1 onion (sliced)",
+      "Vegetables (pechay/cabbage, carrots)",
+      "Soy sauce to taste",
+      "Vinegar for seasoning",
+      "Pepper"
+    ],
+    "instructions": [
+      "Sauté garlic and onion; add noodles with a splash of water/stock.",
+      "Season with soy and vinegar. Toss in vegetables; cook until just tender."
+    ],
+    "description": "Lucban-style noodles seasoned with vinegar; traditionally eaten on banana leaf."
+  },
+  {
+    "id": 79,
+    "title": "Pancit Malabon",
+    "subtitle": "Seafood noodle dish with annatto sauce",
+    "cookingTime": "60 min",
+    "servings": "6–8",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Medium",
+    "imageUrl": "img_pancit_malabon",
+    "isFavorite": false,
+    "ingredients": [
+      "400 g thick rice noodles",
+      "2 tbsp annatto oil",
+      "4 cloves garlic (minced)",
+      "1 onion (chopped)",
+      "2 cups shrimp broth",
+      "2 tbsp fish sauce",
+      "2 tbsp cornstarch in water (to thicken)",
+      "Boiled eggs (sliced)",
+      "Shrimp (blanched)",
+      "Chicharrón (crushed)",
+      "Green onions",
+      "Calamansi"
+    ],
+    "instructions": [
+      "Sauce: sauté garlic and onion in annatto oil; add shrimp broth and fish sauce; thicken with cornstarch slurry.",
+      "Cook noodles per package; toss with sauce.",
+      "Top with eggs, shrimp, chicharrón, green onions, and calamansi."
+    ],
+    "description": "Seafood noodle dish with annatto sauce (Malabon)."
+  },
+  {
+    "id": 80,
+    "title": "Pancit Palabok",
+    "subtitle": "Rice noodles with shrimp sauce and toppings",
+    "cookingTime": "60 min",
+    "servings": "6–8",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Medium",
+    "imageUrl": "img_pancit_palabok",
+    "isFavorite": false,
+    "ingredients": [
+      "400 g thin rice noodles",
+      "2 tbsp annatto oil",
+      "4 cloves garlic (minced)",
+      "1 onion (chopped)",
+      "2 cups shrimp broth",
+      "2 tbsp fish sauce",
+      "2 tbsp cornstarch in water (to thicken)",
+      "Boiled eggs (sliced)",
+      "Shrimp (blanched)",
+      "Chicharrón (crushed)",
+      "Green onions",
+      "Calamansi"
+    ],
+    "instructions": [
+      "Sauce: sauté garlic and onion in annatto oil; add shrimp broth and fish sauce; thicken with cornstarch slurry.",
+      "Cook noodles per package; toss with sauce.",
+      "Top with eggs, shrimp, chicharrón, green onions, and calamansi."
+    ],
+    "description": "Rice noodles with rich shrimp sauce and toppings (Palabok)."
+  },
+  {
+    "id": 81,
+    "title": "Pata Tim",
+    "subtitle": "Braised pork hock in sweet soy sauce",
+    "cookingTime": "3 hours",
+    "servings": "4–6",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Medium",
+    "imageUrl": "img_pata_tim",
+    "isFavorite": false,
+    "ingredients": [
+      "1 whole pork hock (cleaned)",
+      "1 tbsp oil",
+      "6 cloves garlic (minced)",
+      "1 onion (chopped)",
+      "1/2 cup soy sauce",
+      "1/4 cup brown sugar",
+      "2 star anise",
+      "1 tbsp oyster sauce",
+      "4 cups water",
+      "Pechay/bok choy",
+      "Pepper"
+    ],
+    "instructions": [
+      "Sauté garlic and onion; add pork hock and sear.",
+      "Pour soy sauce, sugar, oyster sauce, water, and star anise; simmer gently until tender (1.5–2.5 hours).",
+      "Add pechay; cook 1–2 minutes. Reduce sauce to glaze; serve."
+    ],
+    "description": "Chinese-Filipino braised pork hock in sweet soy with star anise."
+  },
+  {
+    "id": 82,
+    "title": "Pinakbet",
+    "subtitle": "Ilocano vegetable stew with eggplant and bitter melon",
+    "cookingTime": "35 min",
+    "servings": "4–6",
+    "region": "Ilocos",
+    "difficulty": "Easy",
+    "imageUrl": "img_pinakbet",
+    "isFavorite": false,
+    "ingredients": [
+      "1 tbsp oil",
+      "4 cloves garlic (minced)",
+      "1 onion (sliced)",
+      "2 tomatoes (chopped)",
+      "1 cup squash (cubes)",
+      "1 cup eggplant (chunks)",
+      "1 cup ampalaya (sliced)",
+      "1 cup okra (sliced)",
+      "1–2 tbsp bagoong isda/alamang",
+      "Pepper"
+    ],
+    "instructions": [
+      "Sauté garlic, onion, and tomatoes. Add hard veggies (squash) first; cook a few minutes.",
+      "Add remaining vegetables and bagoong; cover and cook until just tender. Season with pepper."
+    ],
+    "description": "Ilocano vegetable stew flavored with bagoong."
+  },
+  {
+    "id": 83,
+    "title": "Pinangat na Isda",
+    "subtitle": "Fish simmered in tomatoes and sour broth",
+    "cookingTime": "30 min",
+    "servings": "3–4",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Easy",
+    "imageUrl": "img_pinangat_na_isda",
+    "isFavorite": false,
+    "ingredients": [
+      "1 whole fish (tilapia/bangus), cleaned",
+      "2 tomatoes (quartered)",
+      "1 onion (sliced)",
+      "1 thumb ginger (sliced)",
+      "1/4 cup vinegar or a few kamias",
+      "1/2 cup water",
+      "Salt & pepper"
+    ],
+    "instructions": [
+      "Layer tomatoes, onion, and ginger in a pot; place fish on top.",
+      "Add vinegar and water; season lightly. Cover and simmer gently until fish is cooked.",
+      "Adjust seasoning and serve."
+    ],
+    "description": "Fish gently simmered in tomatoes, ginger, and souring agent."
+  },
+  {
+    "id": 84,
+    "title": "Pininyahang Manok",
+    "subtitle": "Chicken braised with pineapple and milk",
+    "cookingTime": "45 min",
+    "servings": "4–6",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Easy",
+    "imageUrl": "img_pininyahang_manok",
+    "isFavorite": false,
+    "ingredients": [
+      "1 tbsp oil",
+      "4 cloves garlic (minced)",
+      "1 onion (chopped)",
+      "1 kg chicken (cut-ups)",
+      "1 can pineapple chunks (reserve juice)",
+      "1 cup evaporated milk or coconut milk",
+      "1 bell pepper (sliced)",
+      "Salt & pepper"
+    ],
+    "instructions": [
+      "Sauté garlic and onion; add chicken and cook until lightly browned.",
+      "Pour in pineapple juice and milk; simmer until chicken is tender.",
+      "Add pineapple chunks and bell pepper; season and cook 2–3 minutes more."
+    ],
+    "description": "Chicken stewed with pineapple and milk for a sweet-creamy sauce."
+  },
+  {
+    "id": 85,
+    "title": "Pochero",
+    "subtitle": "Beef stew with tomato, saba bananas, and vegetables",
+    "cookingTime": "90 minutes",
+    "servings": "4–6",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Medium",
+    "imageUrl": "img_pochero",
+    "isFavorite": false,
+    "ingredients": [
+      "1 kg beef (chunks)",
+      "2 tbsp oil",
+      "6 cloves garlic (minced)",
+      "1 onion (chopped)",
+      "1 cup tomato sauce",
+      "4 cups broth",
+      "2 saba bananas (chunks)",
+      "2 potatoes (cubed)",
+      "Cabbage/pechay",
+      "Salt & pepper"
+    ],
+    "instructions": [
+      "Brown beef; sauté garlic and onion. Add tomato sauce and broth; simmer until tender.",
+      "Add potatoes and bananas; cook until tender. Add greens; season and serve."
+    ],
+    "description": "Beef stew with tomato, saba bananas, and vegetables."
+  },
+  {
+    "id": 86,
     "title": "Poqui Poqui",
     "subtitle": "Traditional Bulacan eggplant and egg dish",
     "cookingTime": "25 min",
-    "servings": "4 people",
+    "servings": "4",
+    "region": "Ilocos",
     "difficulty": "Easy",
     "imageUrl": "img_poqui_poqui",
     "isFavorite": false,
     "ingredients": [
-      "4 large eggplants (talong)",
-      "4 eggs (beaten)",
-      "2 medium tomatoes (chopped)",
       "1 large white onion (sliced)",
-      "4 cloves garlic (minced)",
+      "2 medium tomatoes (chopped)",
       "2 tbsp cooking oil",
-      "Salt and pepper to taste",
-      "Calamansi juice (for serving)"
+      "4 cloves garlic (minced)",
+      "4 eggs (beaten)",
+      "4 large eggplants (talong)",
+      "Calamansi juice (for serving)",
+      "Salt and pepper to taste"
     ],
     "instructions": [
       "Roast eggplants over open flame until skin is charred and flesh is soft.",
@@ -364,23 +2535,51 @@
     "description": "A beloved Bulacan comfort food that combines roasted eggplant with scrambled eggs, creating a smoky and satisfying dish perfect for any meal."
   },
   {
-    "id": 12,
+    "id": 87,
+    "title": "Pork Asado",
+    "subtitle": "Chinese-Filipino style pork asado",
+    "cookingTime": "90 min",
+    "servings": "4–6",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Medium",
+    "imageUrl": "img_pork_asado",
+    "isFavorite": false,
+    "ingredients": [
+      "1 kg pork shoulder (slab)",
+      "1/3 cup soy sauce",
+      "1/4 cup sugar",
+      "1/4 cup calamansi juice",
+      "1/4 cup water",
+      "6 cloves garlic (smashed)",
+      "1 small onion (sliced)",
+      "1 star anise (optional)",
+      "Pepper"
+    ],
+    "instructions": [
+      "Combine soy, sugar, calamansi, water, garlic, and onion; add pork and simmer gently until tender.",
+      "Remove pork and slice; reduce sauce to glaze. Return slices to coat; serve."
+    ],
+    "description": "Sweet-savory braised pork, sliced and sauced."
+  },
+  {
+    "id": 88,
     "title": "Rellenong Talong",
     "subtitle": "Stuffed eggplant",
     "cookingTime": "45 min",
-    "servings": "4 people",
+    "servings": "4",
+    "region": "Central Luzon",
     "difficulty": "Medium",
     "imageUrl": "img_rellenong_talong",
     "isFavorite": false,
     "ingredients": [
-      "4 large eggplants",
+      "1 medium white onion (chopped)",
+      "1/4 cup cooking oil",
+      "2 medium tomatoes (chopped)",
       "3 eggs (2 for stuffing, 1 for coating)",
       "4 cloves garlic (minced)",
-      "1 medium white onion (chopped)",
-      "2 medium tomatoes (chopped)",
-      "1/4 cup cooking oil",
-      "Salt and pepper to taste",
-      "Calamansi for serving"
+      "4 large eggplants",
+      "Calamansi for serving",
+      "Salt and pepper to taste"
     ],
     "instructions": [
       "Grill eggplants until tender but keep shape intact.",
@@ -397,55 +2596,88 @@
     "description": "An elegant Bulacan dish where eggplants are hollowed out and stuffed with a savory egg mixture, then fried to perfection."
   },
   {
-    "id": 13,
-    "title": "Scrambled Eggs with Tomatoes",
-    "subtitle": "Simple Filipino-style scrambled eggs",
-    "cookingTime": "10 min",
-    "servings": "2-3 people",
+    "id": 89,
+    "title": "Sardinas na may Itlog at Kamatis",
+    "subtitle": "Canned sardines sautéed with tomato and egg",
+    "cookingTime": "15 min",
+    "servings": "3",
+    "region": "Nationwide (Philippines)",
     "difficulty": "Easy",
-    "imageUrl": "img_scrambled_eggs_tomato",
+    "imageUrl": "img_sardinas_egg",
     "isFavorite": false,
     "ingredients": [
-      "6 eggs (beaten)",
-      "3 medium tomatoes (chopped)",
-      "4 cloves garlic (minced)",
-      "1 white onion (chopped)",
-      "3 tbsp cooking oil",
-      "Salt and pepper to taste",
-      "Calamansi for serving"
+      "1 can sardines in tomato sauce",
+      "1 red onion (sliced)",
+      "1 tbsp cooking oil",
+      "2 cloves garlic (minced)",
+      "2 eggs (beaten)",
+      "2 medium tomatoes (chopped)",
+      "Calamansi (optional, for serving)"
     ],
     "instructions": [
-      "Heat oil in a pan, sauté garlic and onions until fragrant.",
-      "Add tomatoes and cook until soft and mushy.",
-      "Pour in beaten eggs and let sit for 30 seconds.",
-      "Gently scramble eggs with tomato mixture.",
-      "Season with salt and pepper.",
-      "Cook until eggs are set but still creamy.",
-      "Serve hot with rice and calamansi."
+      "Sauté garlic, onion, and tomatoes until soft.",
+      "Add sardines and simmer for 5 minutes.",
+      "Push mixture to one side and add beaten eggs.",
+      "Scramble then mix everything together.",
+      "Serve hot with calamansi and rice."
     ],
-    "description": "A simple and delicious egg dish that combines the sweetness of tomatoes with fluffy scrambled eggs, perfect for any meal."
+    "description": "A budget-friendly Filipino ulam made with canned sardines, tomato, and eggs."
   },
   {
-    "id": 14,
+    "id": 90,
+    "title": "Sarsiadong Isda",
+    "subtitle": "Fried fish with tomato-egg sauce",
+    "cookingTime": "40 min",
+    "servings": "3-4",
+    "region": "Nationwide (Philippines)",
+    "difficulty": "Easy",
+    "imageUrl": "img_sarsiadong_isda",
+    "isFavorite": false,
+    "ingredients": [
+      "1 whole fish (tilapia, bangus, or galunggong), cleaned and scored",
+      "Salt and pepper",
+      "Oil for frying",
+      "2 tbsp cooking oil",
+      "4 cloves garlic (minced)",
+      "1 small red or white onion (sliced)",
+      "2 medium tomatoes (chopped)",
+      "1 cup water or broth",
+      "2 eggs (beaten)",
+      "1 tbsp fish sauce (or 1/2 tsp salt)",
+      "1/4 tsp black pepper",
+      "Calamansi wedges for serving (optional)"
+    ],
+    "instructions": [
+      "Season fish with salt and pepper. Fry until crisp and cooked; set aside.",
+      "Sauté garlic and onion; add tomatoes and cook until soft.",
+      "Pour in water/broth; season with fish sauce and pepper; simmer briefly.",
+      "Lower heat; drizzle in beaten eggs while stirring to create ribbons.",
+      "Pour sauce over fried fish; serve with rice and calamansi."
+    ],
+    "description": "Crispy fried fish topped with a savory tomato-onion sauce finished with fluffy egg ribbons."
+  },
+  {
+    "id": 91,
     "title": "Sinampalukang Manok",
     "subtitle": "Bulacan-style tamarind chicken soup",
     "cookingTime": "50 min",
-    "servings": "6 people",
+    "servings": "6",
+    "region": "Bulacan, Central Luzon",
     "difficulty": "Medium",
     "imageUrl": "img_sinampalukan",
     "isFavorite": false,
     "ingredients": [
-      "1 whole chicken (cut into pieces)",
-      "2 medium tomatoes (quartered)",
       "1 large white onion (quartered)",
-      "6 cloves garlic (crushed)",
+      "1 medium radish (sliced thick)",
+      "1 whole chicken (cut into pieces)",
       "2 inches ginger (sliced)",
       "2 medium potatoes (quartered)",
-      "1 medium radish (sliced thick)",
-      "6 cups water",
+      "2 medium tomatoes (quartered)",
       "2 tbsp cooking oil",
-      "Salt and pepper to taste",
-      "Fish sauce to taste"
+      "6 cloves garlic (crushed)",
+      "6 cups water",
+      "Fish sauce to taste",
+      "Salt and pepper to taste"
     ],
     "instructions": [
       "Heat oil in a large pot.",
@@ -461,24 +2693,25 @@
     "description": "A comforting and sour soup that's a Bulacan favorite, combining tender chicken with fresh vegetables in a flavorful tamarind-based broth."
   },
   {
-    "id": 15,
+    "id": 92,
     "title": "Sinigang na Hipon",
     "subtitle": "Filipino shrimp tamarind soup",
     "cookingTime": "35 min",
-    "servings": "4-6 people",
+    "servings": "4-6",
+    "region": "Nationwide (Philippines)",
     "difficulty": "Easy",
     "imageUrl": "img_sinigang_hipon",
     "isFavorite": false,
     "ingredients": [
-      "1 lb large shrimp (cleaned)",
-      "2 medium tomatoes (quartered)",
-      "1 large white onion (quartered)",
-      "2 pieces taro (sliced)",
       "1 bundle kangkong (water spinach)",
-      "6 pieces okra (sliced)",
-      "2 pieces long green chili",
+      "1 large white onion (quartered)",
+      "1 lb large shrimp (cleaned)",
       "1 pack tamarind soup mix",
+      "2 medium tomatoes (quartered)",
+      "2 pieces long green chili",
+      "2 pieces taro (sliced)",
       "6 cups water",
+      "6 pieces okra (sliced)",
       "Fish sauce to taste",
       "Salt and pepper to taste"
     ],
@@ -495,27 +2728,28 @@
     "description": "A tangy and savory Filipino soup featuring fresh shrimp and vegetables in a flavorful tamarind broth that's both comforting and refreshing."
   },
   {
-    "id": 16,
+    "id": 93,
     "title": "Sisig",
     "subtitle": "Sizzling pork sisig",
     "cookingTime": "30 min",
-    "servings": "3-4 people",
+    "servings": "3-4",
+    "region": "Pampanga, Central Luzon",
     "difficulty": "Medium",
     "imageUrl": "img_pork_sisig",
     "isFavorite": false,
     "ingredients": [
-      "1 lb pork belly (boiled and chopped)",
-      "1/4 lb pork liver (optional)",
       "1 large onion (chopped)",
-      "3-4 pieces calamansi (juiced)",
+      "1 lb pork belly (boiled and chopped)",
       "1 raw egg",
-      "2 tbsp mayonnaise",
-      "4 cloves garlic (minced)",
+      "1 tsp soy sauce (optional)",
+      "1/4 lb pork liver (optional)",
       "2 medium tomatoes (chopped)",
-      "2-3 green chili peppers (chopped)",
       "2 tbsp cooking oil",
-      "Salt and pepper to taste",
-      "1 tsp soy sauce (optional)"
+      "2 tbsp mayonnaise",
+      "2-3 green chili peppers (chopped)",
+      "3-4 pieces calamansi (juiced)",
+      "4 cloves garlic (minced)",
+      "Salt and pepper to taste"
     ],
     "instructions": [
       "Boil pork belly until tender, then chop finely.",
@@ -529,22 +2763,52 @@
     "description": "A traditional Filipino sizzling pork sisig, featuring crispy pork belly with authentic flavors and cooking techniques passed down through generations."
   },
   {
-    "id": 17,
+    "id": 94,
+    "title": "Tinolang Isda",
+    "subtitle": "Fish soup with ginger and vegetables",
+    "cookingTime": "30 min",
+    "servings": "4",
+    "region": "Visayas",
+    "difficulty": "Easy",
+    "imageUrl": "img_tinolang_isda",
+    "isFavorite": false,
+    "ingredients": [
+      "1 bunch leafy greens (malunggay or pechay)",
+      "1 medium sayote (quartered)",
+      "1 white onion (quartered)",
+      "1/2 kilo fish (tilapia or bangus, cut into pieces)",
+      "2 inches ginger (sliced)",
+      "6 cups water",
+      "Fish sauce to taste"
+    ],
+    "instructions": [
+      "Bring water to boil with ginger and onion.",
+      "Add fish and cook for 10 minutes.",
+      "Add sayote and simmer until tender.",
+      "Season with fish sauce.",
+      "Add leafy greens and cook for 2 minutes.",
+      "Serve hot with rice."
+    ],
+    "description": "A light fish soup flavored with ginger and vegetables, perfect with rice."
+  },
+  {
+    "id": 95,
     "title": "Tinolang Manok",
     "subtitle": "Filipino chicken ginger soup",
     "cookingTime": "40 min",
-    "servings": "5-6 people",
+    "servings": "5-6",
+    "region": "CALABARZON",
     "difficulty": "Easy",
     "imageUrl": "img_tinolang_manok",
     "isFavorite": false,
     "ingredients": [
+      "1 white onion (quartered)",
       "1 whole chicken (cut into pieces)",
+      "2 medium chayote (quartered)",
+      "2 tbsp cooking oil",
       "3 inches ginger (sliced)",
       "6 cloves garlic (crushed)",
-      "1 white onion (quartered)",
-      "2 medium chayote (quartered)",
       "6 cups water",
-      "2 tbsp cooking oil",
       "Fish sauce to taste",
       "Salt and pepper to taste"
     ],
@@ -560,23 +2824,24 @@
     "description": "A comforting Filipino soup featuring chicken and vegetables in a clear, ginger-infused broth that's perfect for cold weather."
   },
   {
-    "id": 18,
+    "id": 96,
     "title": "Tortang Patatas",
     "subtitle": "Filipino potato omelet",
     "cookingTime": "25 min",
-    "servings": "3-4 people",
+    "servings": "3-4",
+    "region": "CALABARZON",
     "difficulty": "Easy",
     "imageUrl": "img_tortang_patatas",
     "isFavorite": false,
     "ingredients": [
-      "3 large potatoes (peeled and cubed)",
-      "4 eggs (beaten)",
-      "4 cloves garlic (minced)",
       "1 white onion (chopped)",
       "2 medium tomatoes (chopped)",
+      "3 large potatoes (peeled and cubed)",
       "3 tbsp cooking oil",
-      "Salt and pepper to taste",
-      "Calamansi for serving"
+      "4 cloves garlic (minced)",
+      "4 eggs (beaten)",
+      "Calamansi for serving",
+      "Salt and pepper to taste"
     ],
     "instructions": [
       "Boil potatoes until tender, then drain and mash lightly.",
@@ -590,23 +2855,54 @@
     "description": "A hearty Filipino omelet made with mashed potatoes and eggs, perfect for breakfast or any meal of the day."
   },
   {
-    "id": 19,
+    "id": 97,
+    "title": "Tortang Patatas at Karot",
+    "subtitle": "Crispy patties with vegetables",
+    "cookingTime": "30 min",
+    "servings": "4",
+    "region": "CALABARZON",
+    "difficulty": "Easy",
+    "imageUrl": "img_potato_carrot_fritters",
+    "isFavorite": false,
+    "ingredients": [
+      "1 large carrot (grated)",
+      "1 small white onion (chopped)",
+      "1/4 cup flour",
+      "2 cloves garlic (minced)",
+      "2 eggs (beaten)",
+      "2 medium potatoes (grated)",
+      "3 tbsp cooking oil",
+      "Oil for frying",
+      "Salt and pepper to taste"
+    ],
+    "instructions": [
+      "Combine potatoes, carrot, onion, garlic, eggs, and flour in a bowl.",
+      "Season with salt and pepper.",
+      "Heat oil in a pan and drop spoonfuls of the mixture.",
+      "Fry until golden brown and crispy.",
+      "Drain excess oil and serve hot."
+    ],
+    "description": "Crispy and savory vegetable fritters made with potato, carrot, and egg."
+  },
+  {
+    "id": 98,
     "title": "Tortang Talong",
     "subtitle": "Bulacan-style eggplant omelet",
     "cookingTime": "20 min",
-    "servings": "3-4 people",
+    "servings": "3-4",
+    "region": "Bulacan, Central Luzon",
     "difficulty": "Easy",
     "imageUrl": "img_tortang_talong",
     "isFavorite": false,
     "ingredients": [
-      "3 large eggplants",
-      "3 eggs (beaten)",
-      "3 cloves garlic (minced)",
       "1 small white onion (finely chopped)",
       "2 medium tomatoes (chopped)",
+      "3 cloves garlic (minced)",
+      "3 eggs (beaten)",
+      "3 large eggplants",
       "3 tbsp cooking oil",
-      "Salt and pepper to taste",
-      "Calamansi for serving"
+      "Calamansi for serving",
+      "Salt and pepper to taste"
     ],
     "instructions": [
       "Grill eggplants until skin is charred and flesh is tender.",
@@ -620,25 +2916,54 @@
     "description": "A classic Filipino dish popular in Bulacan, featuring grilled eggplant coated in egg and pan-fried to golden perfection."
   },
   {
-    "id": 20,
+    "id": 99,
+    "title": "Tortang Talong",
+    "subtitle": "Simple torta with tomato twist",
+    "cookingTime": "25 min",
+    "servings": "3-4",
+    "region": "CALABARZON",
+    "difficulty": "Easy",
+    "imageUrl": "img_eggplant_tomato_omelet",
+    "isFavorite": false,
+    "ingredients": [
+      "1 small white onion (chopped)",
+      "2 cloves garlic (minced)",
+      "2 medium tomatoes (chopped)",
+      "3 eggs (beaten)",
+      "3 large eggplants",
+      "3 tbsp cooking oil",
+      "Salt and pepper to taste"
+    ],
+    "instructions": [
+      "Grill eggplants until skin is charred, then peel.",
+      "Flatten eggplants with a fork.",
+      "Mix tomatoes, onion, and garlic with beaten eggs.",
+      "Dip eggplant in mixture and pan-fry until golden brown.",
+      "Serve hot with rice."
+    ],
+    "description": "A variation of tortang talong with added tomato and onion flavor."
+  },
+  {
+    "id": 100,
     "title": "Ukoy na Labanos",
     "subtitle": "Bulacan-style radish fritters",
     "cookingTime": "35 min",
-    "servings": "4-5 people",
+    "servings": "4-5",
+    "region": "Bulacan, Central Luzon",
     "difficulty": "Medium",
     "imageUrl": "img_ukoy_labanos",
     "isFavorite": false,
     "ingredients": [
-      "2 cups radish (julienned)",
-      "1 large carrot (julienned)",
-      "2 eggs (beaten)",
       "1 cup all-purpose flour",
-      "3 cloves garlic (minced)",
+      "1 large carrot (julienned)",
       "1 small white onion (chopped)",
       "1/2 cup water",
+      "2 cups radish (julienned)",
+      "2 eggs (beaten)",
+      "3 cloves garlic (minced)",
+      "Calamansi and soy sauce for dipping",
       "Oil for deep frying",
-      "Salt and pepper to taste",
-      "Calamansi and soy sauce for dipping"
+      "Salt and pepper to taste"
     ],
     "instructions": [
       "Mix flour with water to make a batter.",

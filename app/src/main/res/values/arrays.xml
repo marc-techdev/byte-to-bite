@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="recipes_protein_options">
+        <item>@string/recipes_protein_any</item>
+        <item>@string/recipes_protein_chicken</item>
+        <item>@string/recipes_protein_pork</item>
+        <item>@string/recipes_protein_beef</item>
+        <item>@string/recipes_protein_fish</item>
+        <item>@string/recipes_protein_shrimp</item>
+    </string-array>
+</resources>

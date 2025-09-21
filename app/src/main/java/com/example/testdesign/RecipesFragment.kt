@@ -14,6 +14,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.textfield.MaterialAutoCompleteTextView
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import java.io.BufferedReader
@@ -28,6 +29,7 @@ class RecipesFragment : Fragment() {
     private lateinit var searchEditText: EditText
     private lateinit var noResultsLayout: LinearLayout
     private lateinit var filterIcon: ImageView
+    private lateinit var ddProtein: MaterialAutoCompleteTextView
 
     private var fullRecipeList: MutableList<Recipe> = mutableListOf()
     private var scannedIngredients: MutableList<String> = mutableListOf()
@@ -36,6 +38,11 @@ class RecipesFragment : Fragment() {
     companion object {
         private const val FAVORITES_PREF = "recipe_favorites"
         private const val ARG_SCANNED_INGREDIENTS = "arg_scanned_ingredients"
+
+        // Persist proteins separately so Scan and Recipes stay in sync
+        private const val SCAN_PREF = "scan_ingredients_prefs"
+        private const val KEY_SAVED_ING = "scanned_ingredients"
+        private const val KEY_SAVED_PROTEINS = "selected_proteins"
 
         fun newInstance(scanned: ArrayList<String>): RecipesFragment {
             return RecipesFragment().apply {
@@ -46,7 +53,28 @@ class RecipesFragment : Fragment() {
         }
     }
 
-    // ---------------- Protein logic (category + context aware) ----------------
+    /* ---------------- Protein logic (category + context aware) ---------------- */
+
+    // Normalized protein "keys" we support everywhere
+    private val proteinKeys = listOf("chicken", "pork", "beef", "fish", "shrimp")
+
+    // Dropdown display text ↔ key
+    private val proteinDisplayToKey = mapOf(
+        "Any protein" to null,
+        "Chicken" to "chicken",
+        "Pork" to "pork",
+        "Beef" to "beef",
+        "Fish" to "fish",
+        "Shrimp" to "shrimp"
+    )
+    private val proteinKeyToDisplay = mapOf(
+        null to "Any protein",
+        "chicken" to "Chicken",
+        "pork" to "Pork",
+        "beef" to "Beef",
+        "fish" to "Fish",
+        "shrimp" to "Shrimp"
+    )
 
     // What counts as each protein (English + Filipino + common species/cuts)
     private val proteinSynonyms: Map<String, List<String>> = mapOf(
@@ -55,20 +83,18 @@ class RecipesFragment : Fragment() {
         "beef"    to listOf("beef", "baka", "bulalo", "beef shank"),
         "fish"    to listOf(
             "fish", "isda",
-            // common local fishes; add more as needed
-            "bangus", "tilapia", "galunggong", "gg", "tulingan", "tanigue", "tuna", "salmon", "mackerel", "sardines"
+            "bangus", "tilapia", "galunggong", "gg", "tulingan",
+            "tanigue", "tuna", "salmon", "mackerel", "sardines"
         ),
         "shrimp"  to listOf("shrimp", "hipon", "prawn", "prawns", "suahe")
     )
 
-    // If a protein word is directly followed by any of these, it should NOT count as a real protein ingredient.
-    // Example: "fish sauce", "chicken stock", "pork bouillon", etc.
+    // Disallowed contexts like "fish sauce", "chicken stock", etc.
     private val disallowedContext = listOf(
-        "sauce", "broth", "stock", "powder", "bouillon", "cube", "paste", "seasoning", "flavoring", "extract", "granules"
+        "sauce", "broth", "stock", "powder", "bouillon", "cube",
+        "paste", "seasoning", "flavoring", "extract", "granules"
     )
 
-    // Build regex per synonym: word-boundary match + negative lookahead for disallowed contexts
-    // e.g. \bfish\b(?!\s*(sauce|broth|stock|...)\b)
     private fun makeProteinPatternFor(syn: String): Pattern {
         val escaped = Pattern.quote(syn)
         val ctx = disallowedContext.joinToString("|") { Pattern.quote(it) }
@@ -79,14 +105,12 @@ class RecipesFragment : Fragment() {
     private fun containsProtein(text: String, proteinKey: String): Boolean {
         val syns = proteinSynonyms[proteinKey] ?: return false
         val hay = text.lowercase(Locale.getDefault())
-        // any synonym that is NOT followed by a disallowed context counts
         return syns.any { syn -> makeProteinPatternFor(syn).matcher(hay).find() }
     }
 
-    // ---------------- Canonicalization helpers (same as before, expanded) ----------------
+    /* ---------------- Canonicalization helpers ---------------- */
 
     private val repl = listOf(
-        // veggies / terms
         "bok choy" to "pechay", "bokchoy" to "pechay",
         "talong" to "eggplant",
         "kamatis" to "tomato",
@@ -113,13 +137,10 @@ class RecipesFragment : Fragment() {
 
     private fun canonicalize(text: String): String {
         var t = text.lowercase(Locale.getDefault())
-        // map longer first to avoid partial overlaps
         repl.sortedByDescending { it.first.length }.forEach { (from, to) ->
             t = t.replace(from, to)
         }
-        // carrots -> carrot (basic plural smoothing)
         t = t.replace(Regex("\\b([a-z]+)s\\b"), "$1")
-        // protect “egg” vs “eggplant”
         t = t.replace(Regex("\\begg\\s*plant\\b"), "eggplant")
         return t
     }
@@ -134,7 +155,7 @@ class RecipesFragment : Fragment() {
         return canon to raw.lowercase(Locale.getDefault())
     }
 
-    // -------------------------------------------------------------------------
+    /* ---------------- Fragment lifecycle ---------------- */
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -150,11 +171,13 @@ class RecipesFragment : Fragment() {
         searchEditText = view.findViewById(R.id.et_search)
         noResultsLayout = view.findViewById(R.id.ll_no_results)
         filterIcon = view.findViewById(R.id.ic_filter_recipes)
+        ddProtein = view.findViewById(R.id.dd_protein_filter)
 
         setupRecyclerView()
         loadRecipesFromAssets()
         setupSearchListener()
-        setupFilterListener()
+        setupFilterIconListener()
+        setupProteinDropdown()
 
         // Prefer ingredients passed from Scan → Find Recipes
         val passed = arguments?.getStringArrayList(ARG_SCANNED_INGREDIENTS)
@@ -164,11 +187,12 @@ class RecipesFragment : Fragment() {
             isFilterActive = true
         }
 
-        // Fallback to last saved scan/proteins
+        // Fallback to saved scan/proteins
         if (scannedIngredients.isEmpty()) {
-            val sp = requireContext().getSharedPreferences("scan_ingredients_prefs", Context.MODE_PRIVATE)
+            val sp = requireContext().getSharedPreferences(SCAN_PREF, Context.MODE_PRIVATE)
 
-            val json = sp.getString("scanned_ingredients", null)
+            // restore scanned produce list
+            val json = sp.getString(KEY_SAVED_ING, null)
             if (!json.isNullOrEmpty()) {
                 val type = object : TypeToken<MutableList<ScannedIngredientsAdapter.ScannedIngredient>>() {}.type
                 val saved: MutableList<ScannedIngredientsAdapter.ScannedIngredient> =
@@ -176,11 +200,15 @@ class RecipesFragment : Fragment() {
                 scannedIngredients.addAll(saved.map { it.name.lowercase(Locale.getDefault()).trim() })
             }
 
-            val proteins = sp.getStringSet("selected_proteins", emptySet()) ?: emptySet()
+            // restore selected proteins (if any)
+            val proteins = sp.getStringSet(KEY_SAVED_PROTEINS, emptySet()) ?: emptySet()
             if (proteins.isNotEmpty()) scannedIngredients.addAll(proteins.map { it.lowercase(Locale.getDefault()).trim() })
 
             if (scannedIngredients.isNotEmpty()) isFilterActive = true
         }
+
+        // Sync dropdown display to current state
+        syncProteinDropdownFromState()
 
         applyFilters(searchEditText.text.toString().trim())
     }
@@ -191,10 +219,12 @@ class RecipesFragment : Fragment() {
         recipesAdapter.notifyDataSetChanged()
     }
 
+    /* ---------------- UI setup ---------------- */
+
     private fun setupRecyclerView() {
         recipesAdapter = RecipesAdapter(
             recipes = mutableListOf(),
-            onRecipeClick = { /* handled inside adapter */ },
+            onRecipeClick = { /* handled in adapter */ },
             onFavoriteClick = { recipe -> toggleFavorite(recipe) }
         )
         recyclerView.apply {
@@ -202,6 +232,70 @@ class RecipesFragment : Fragment() {
             layoutManager = LinearLayoutManager(requireContext())
         }
     }
+
+    private fun setupSearchListener() {
+        searchEditText.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+            override fun afterTextChanged(s: Editable?) {
+                applyFilters(s.toString().trim())
+            }
+        })
+    }
+
+    private fun setupFilterIconListener() {
+        filterIcon.setOnClickListener {
+            // Toggle overall filtering regardless of dropdown state
+            isFilterActive = !isFilterActive
+            applyFilters(searchEditText.text.toString().trim())
+        }
+    }
+
+    private fun setupProteinDropdown() {
+        val items = proteinDisplayToKey.keys.toList() // ["Any protein", "Chicken", ...]
+        ddProtein.setSimpleItems(items.toTypedArray())
+
+        ddProtein.setOnItemClickListener { parent, _, position, _ ->
+            val label = parent.getItemAtPosition(position) as String
+            val key = proteinDisplayToKey[label] // null for "Any protein", else "chicken"/...
+
+            applyProteinSelection(key)
+        }
+    }
+
+    private fun syncProteinDropdownFromState() {
+        // Find first protein key currently present in scannedIngredients (if any)
+        val current = scannedIngredients.firstOrNull { it in proteinKeys }
+        val label = proteinKeyToDisplay[current] ?: "Any protein"
+        ddProtein.setText(label, /* filter= */ false)
+    }
+
+    private fun applyProteinSelection(selectedKey: String?) {
+        // Remove any existing protein keys from the list
+        scannedIngredients.removeAll { it in proteinKeys }
+
+        // Add the newly selected one (if not "Any protein")
+        if (selectedKey != null) scannedIngredients.add(selectedKey)
+
+        // Persist selection so Scan and Recipes stay consistent
+        val sp = requireContext().getSharedPreferences(SCAN_PREF, Context.MODE_PRIVATE)
+        with(sp.edit()) {
+            if (selectedKey == null) {
+                putStringSet(KEY_SAVED_PROTEINS, emptySet())
+            } else {
+                putStringSet(KEY_SAVED_PROTEINS, setOf(selectedKey))
+            }
+            apply()
+        }
+
+        // If a protein is selected OR we have produce scanned, enable filtering.
+        isFilterActive = scannedIngredients.isNotEmpty()
+
+        // Update count label and list
+        applyFilters(searchEditText.text.toString().trim())
+    }
+
+    /* ---------------- Data loading & favorites ---------------- */
 
     private fun loadRecipesFromAssets() {
         try {
@@ -230,24 +324,7 @@ class RecipesFragment : Fragment() {
         }
     }
 
-    private fun setupSearchListener() {
-        searchEditText.addTextChangedListener(object : TextWatcher {
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
-            override fun afterTextChanged(s: Editable?) {
-                applyFilters(s.toString().trim())
-            }
-        })
-    }
-
-    private fun setupFilterListener() {
-        filterIcon.setOnClickListener {
-            isFilterActive = !isFilterActive
-            applyFilters(searchEditText.text.toString().trim())
-        }
-    }
-
-    // ---------------- Filtering (with context-aware proteins) ------------------
+    /* ---------------- Filtering (with context-aware proteins) ---------------- */
 
     private fun applyFilters(searchQuery: String) {
         var filtered = fullRecipeList.toList()
@@ -265,18 +342,16 @@ class RecipesFragment : Fragment() {
             if (scannedIngredients.isEmpty()) {
                 filtered = emptyList()
             } else {
-                // Separate scanned terms into "protein categories" and "other produce terms"
                 val scansCanon = scannedIngredients.map { canonicalize(it) }.filter { it.isNotBlank() }
                 val scannedProteinKeys = scansCanon.filter { proteinSynonyms.containsKey(it) }.distinct()
                 val scannedProduce = scansCanon.filter { !proteinSynonyms.containsKey(it) }.distinct()
 
-                // Build haystacks (canonical for produce, raw-lower for protein context)
                 val withHay = filtered.map { r ->
                     val (canon, raw) = recipeHaystacks(r)
                     Triple(r, canon, raw)
                 }
 
-                // First pass: ALL produce terms must appear (if any were scanned)
+                // Strict pass: ALL produce + ANY protein (if protein given)
                 var matches = withHay.filter { (_, canon, raw) ->
                     val produceOk = if (scannedProduce.isEmpty()) true
                     else scannedProduce.all { term -> canon.contains(term) }
@@ -287,7 +362,7 @@ class RecipesFragment : Fragment() {
                     produceOk && proteinOk
                 }.map { it.first }
 
-                // Fallback: ANY produce term (still keep protein constraint if proteins were scanned)
+                // Fallback: ANY produce + ANY protein (if protein given)
                 if (matches.isEmpty()) {
                     matches = withHay.filter { (_, canon, raw) ->
                         val produceOk = if (scannedProduce.isEmpty()) true
@@ -327,7 +402,8 @@ class RecipesFragment : Fragment() {
         }
     }
 
-    // Optional helpers (kept)
+    /* ---------------- Optional helpers ---------------- */
+
     fun addScannedIngredient(ingredient: String) {
         val norm = ingredient.lowercase(Locale.getDefault())
         if (!scannedIngredients.contains(norm)) {
@@ -339,6 +415,7 @@ class RecipesFragment : Fragment() {
     fun clearScannedIngredients() {
         scannedIngredients.clear()
         if (isFilterActive) applyFilters(searchEditText.text.toString().trim())
+        syncProteinDropdownFromState()
     }
 
     fun getScannedIngredients(): List<String> = scannedIngredients.toList()

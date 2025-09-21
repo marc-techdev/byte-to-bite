@@ -29,9 +29,9 @@
     <string name="ingredient_recognition_desc">
         Use your camera to identify common Filipino ingredients and find matching recipes.
     </string>
-    <string name="local_ingredient_title">Local Ingredient Information</string>
+    <string name="local_ingredient_title">Regional Recipe Origins</string>
     <string name="local_ingredient_desc">
-        Learn where to find ingredients in local markets across the Philippines.
+        See the Philippine region linked to each dish—sourced from culinary references. Origins may vary by locality.
     </string>
     <string name="authentic_recipes_title">Authentic Recipes</string>
     <string name="authentic_recipes_desc">
@@ -187,6 +187,20 @@ Across the archipelago, each region adds its own flavors and techniques to Filip
 
     <string name="tldr_check_terms">I agree to the Terms and Privacy Policy</string>
     <string name="tldr_check_disclaimer">I understand results may be inaccurate and this is not medical or nutritional advice</string>
+
+    <!-- Button label on About screen -->
+    <string name="about_view_terms_privacy">View Terms &amp; Privacy</string>
+
+    <string name="recipes_protein_hint">Protein</string>
+    <string name="recipes_protein_any">Any protein</string>
+    <string name="recipes_protein_chicken">Chicken</string>
+    <string name="recipes_protein_pork">Pork</string>
+    <string name="recipes_protein_beef">Beef</string>
+    <string name="recipes_protein_fish">Fish</string>
+    <string name="recipes_protein_shrimp">Shrimp</string>
+
+
+
 
 
 

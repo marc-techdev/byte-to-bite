@@ -115,7 +115,7 @@
                     android:layout_marginBottom="8dp">
 
                     <View
-                        android:layout_width="200dp"
+                        android:layout_width="100dp"
                         android:layout_height="3dp"
                         android:background="#FF6B35" />
 

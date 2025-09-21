@@ -1,16 +1,24 @@
 package com.example.testdesign.onboarding
 
+import android.Manifest
+import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.net.Uri
 import android.os.Bundle
+import android.provider.Settings
 import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.activity.addCallback
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.viewpager2.widget.ViewPager2
 import com.example.testdesign.MainActivity
 import com.example.testdesign.R
 import com.example.testdesign.databinding.ActivityOnboardingBinding
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlin.math.roundToInt
 
 class OnboardingActivity : AppCompatActivity(), TermsPrivacyDialogFragment.Listener {
@@ -18,6 +26,25 @@ class OnboardingActivity : AppCompatActivity(), TermsPrivacyDialogFragment.Liste
     private lateinit var binding: ActivityOnboardingBinding
     private lateinit var pages: List<OnboardingPage>
     private lateinit var policyLocal: FirstRunPolicyLocal
+
+    // ==== CAMERA PERMISSION GATE (added) ====
+    private val CAMERA_PERMISSION = Manifest.permission.CAMERA
+
+    private val cameraPermissionLauncher =
+        registerForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
+            if (granted) {
+                // User allowed camera → finish onboarding as usual
+                finishOnboarding()
+            } else {
+                // Denied. Decide whether to show rationale or send to Settings.
+                if (shouldShowRequestPermissionRationale(CAMERA_PERMISSION)) {
+                    showCameraRationale()
+                } else {
+                    showGoToSettingsDialog()
+                }
+            }
+        }
+    // ========================================
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,14 +85,19 @@ class OnboardingActivity : AppCompatActivity(), TermsPrivacyDialogFragment.Liste
             val vp = binding.viewPager
             if (vp.currentItem > 0) vp.currentItem -= 1
         }
+
+        // 🔁 Modified: last-page tap now requests CAMERA before proceeding
         binding.btnNext.setOnClickListener {
             val vp = binding.viewPager
-            if (vp.currentItem == pages.lastIndex) finishOnboarding() else vp.currentItem += 1
+            if (vp.currentItem == pages.lastIndex) {
+                requestCameraThenProceed()
+            } else {
+                vp.currentItem += 1
+            }
         }
 
         // Back key / gesture: NEVER finish onboarding, only go to previous page
         onBackPressedDispatcher.addCallback(this) {
-            // If policy still not accepted or dialog visible, do nothing (dialog is already non-cancelable)
             val gateVisible =
                 supportFragmentManager.findFragmentByTag(TermsPrivacyDialogFragment.TAG) != null
             if (!policyLocal.accepted() || gateVisible) return@addCallback
@@ -119,6 +151,7 @@ class OnboardingActivity : AppCompatActivity(), TermsPrivacyDialogFragment.Liste
         binding.btnPrev.alpha = a
     }
 
+    // ====== Finish onboarding (unchanged) ======
     private fun finishOnboarding() {
         OnboardingSeenLocal(this).markSeen()
         startActivity(Intent(this, MainActivity::class.java))
@@ -195,5 +228,48 @@ class OnboardingActivity : AppCompatActivity(), TermsPrivacyDialogFragment.Liste
             val iv = container.getChildAt(i) as ImageView
             iv.setImageResource(if (i == activeIndex) R.drawable.dot_selected else R.drawable.dot_unselected)
         }
+    }
+
+    // ========= CAMERA PERMISSION helpers (added) =========
+
+    /** Called when “Get Started” is tapped on the last page. */
+    private fun requestCameraThenProceed() {
+        // If already granted, proceed immediately.
+        if (ContextCompat.checkSelfPermission(this, CAMERA_PERMISSION) == PackageManager.PERMISSION_GRANTED) {
+            finishOnboarding()
+            return
+        }
+        // Otherwise show the system permission dialog.
+        cameraPermissionLauncher.launch(CAMERA_PERMISSION)
+    }
+
+    /** Explain why camera is needed; allow retry or skipping for now. */
+    private fun showCameraRationale() {
+        MaterialAlertDialogBuilder(this)
+            .setTitle("Camera permission")
+            .setMessage("We use the camera to scan your ingredients. You can still browse recipes without it.")
+            .setPositiveButton("Allow") { _, _ -> cameraPermissionLauncher.launch(CAMERA_PERMISSION) }
+            .setNegativeButton("Not now") { _, _ -> finishOnboarding() }
+            .show()
+    }
+
+    /** User selected “Don’t ask again” or the prompt won’t show. Offer Settings. */
+    private fun showGoToSettingsDialog() {
+        MaterialAlertDialogBuilder(this)
+            .setTitle("Enable camera in Settings")
+            .setMessage("To scan ingredients, please enable the Camera permission in Settings. You can continue without it.")
+            .setPositiveButton("Open Settings") { _, _ -> openAppSettings() }
+            .setNegativeButton("Continue without it") { _, _ -> finishOnboarding() }
+            .show()
+    }
+
+    private fun openAppSettings() {
+        val intent = Intent(
+            Settings.ACTION_APPLICATION_DETAILS_SETTINGS,
+            Uri.fromParts("package", packageName, null)
+        )
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        startActivity(intent)
+        // Do not finish here; let the user return and scan later.
     }
 }
