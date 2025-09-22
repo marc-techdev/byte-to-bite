@@ -6,20 +6,37 @@
     android:orientation="vertical"
     android:background="@android:color/white">
 
-    <!-- Sticky Header -->
-    <TextView
-        android:id="@+id/tv_sticky_header"
+    <!-- Sticky Header (gradient + icon) -->
+    <LinearLayout
+        android:id="@+id/header_recipes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:text="RECIPES"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:textColor="@android:color/black"
-        android:background="@android:color/white"
-        android:padding="16dp"
+        android:background="@drawable/bg_sticky_header_recipes"
         android:elevation="4dp"
-        android:gravity="start|center_vertical" />
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp">
+
+        <ImageView
+            android:id="@+id/iv_header_recipes"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_recipe_book_home"
+            app:tint="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tv_sticky_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RECIPES"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
     <!-- Search Bar -->
     <LinearLayout
