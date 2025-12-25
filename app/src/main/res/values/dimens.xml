@@ -4,5 +4,6 @@
     <dimen name="onb_dot_spacing">6dp</dimen>
 
     <dimen name="onb_footer_clearance">96dp</dimen>
+
 </resources>
 

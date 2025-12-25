@@ -1,5 +1,6 @@
 package com.example.testdesign
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Bundle
 import android.os.Handler
@@ -13,6 +14,8 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
+import com.example.testdesign.tutorial.ScanHelpSeenLocal
+import com.example.testdesign.tutorial.ScanTutorialBottomSheet
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import java.io.BufferedReader
@@ -108,38 +111,17 @@ class HomeFragment : Fragment() {
     // -------- HERO helpers --------
 
     private fun setupHeroPagerTransform() {
-        // Cross-fade transformer (smooth, no sliding text)
         heroPager.setPageTransformer { page, position ->
-            // keep pages stacked
             page.translationX = -page.width * position
             page.alpha = 1f - kotlin.math.min(1f, abs(position))
         }
-
-        // reset auto-slide timer on user swipe
         heroPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
-            override fun onPageSelected(position: Int) {
-                restartAutoSlide()
-            }
+            override fun onPageSelected(position: Int) { restartAutoSlide() }
         })
     }
 
-    private fun setupHeroCarousel() {
-        val images = buildHeroImages()
-        if (images.isEmpty()) return
-
-        heroAdapter = HeroCarouselAdapter(images)
-        heroPager.adapter = heroAdapter
-
-        // start near middle to allow infinite scroll feel
-        val start = if (images.size > 1) {
-            val mid = Int.MAX_VALUE / 2
-            mid - (mid % images.size)
-        } else 0
-        heroPager.setCurrentItem(start, false)
-    }
-
+    @SuppressLint("DiscouragedApi")
     private fun buildHeroImages(): List<Int> {
-        // Try to collect up to 8 valid drawables from recipe images
         val ids = mutableListOf<Int>()
         for (r in allRecipes.shuffled(Random(System.currentTimeMillis()))) {
             val name = r.imageUrl ?: continue
@@ -147,11 +129,21 @@ class HomeFragment : Fragment() {
             if (id != 0 && !ids.contains(id)) ids += id
             if (ids.size >= 8) break
         }
-        if (ids.isEmpty()) {
-            // Safe fallback (won't crash even if you don’t have placeholders)
-            ids += android.R.drawable.ic_menu_gallery
-        }
+        if (ids.isEmpty()) ids += android.R.drawable.ic_menu_gallery
         return ids
+    }
+
+    private fun setupHeroCarousel() {
+        val images = buildHeroImages()
+        if (images.isEmpty()) return
+        heroAdapter = HeroCarouselAdapter(images)
+        heroPager.adapter = heroAdapter
+
+        val start = if (images.size > 1) {
+            val mid = Int.MAX_VALUE / 2
+            mid - (mid % images.size)
+        } else 0
+        heroPager.setCurrentItem(start, false)
     }
 
     private fun restartAutoSlide() {
@@ -161,8 +153,9 @@ class HomeFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        restartAutoSlide()      // resume auto-play
-        populateMatchingSection() // in case scans changed
+        restartAutoSlide()
+        populateMatchingSection()
+        view?.postDelayed({ maybeShowScanTutorial() }, 650)
     }
 
     override fun onPause() {
@@ -193,6 +186,7 @@ class HomeFragment : Fragment() {
     }
 
     // -------- Matching section --------
+    @SuppressLint("SetTextI18n")
     private fun populateMatchingSection() {
         val scanned = readSavedScannedIngredients()
         val scannedNames = scanned.map { normalize(it.name) }.filter { it.isNotBlank() }
@@ -232,9 +226,7 @@ class HomeFragment : Fragment() {
         return try {
             val type = object : TypeToken<List<SavedIngredient>>() {}.type
             Gson().fromJson<List<SavedIngredient>>(json, type) ?: emptyList()
-        } catch (_: Exception) {
-            emptyList()
-        }
+        } catch (_: Exception) { emptyList() }
     }
 
     private fun normalize(s: String): String {
@@ -243,4 +235,23 @@ class HomeFragment : Fragment() {
             .replace("\\p{Mn}+".toRegex(), "")
         return noAccent.trim()
     }
+
+    // -------- Tutorial helper --------
+
+    private fun maybeShowScanTutorial() {
+        val act = requireActivity()
+        val shouldShow = !ScanHelpSeenLocal.isSeen(act)
+        val noDialogShowing = parentFragmentManager.findFragmentByTag("scan_tutorial") == null
+
+        if (shouldShow && noDialogShowing) {
+            ScanTutorialBottomSheet.showRaw(
+                host = act,
+                videoResId = R.raw.scan_tutorial,
+                subtitleResId = 0,
+                startMuted = false   // 🔊 sound ON
+            )
+        }
+    }
+
+
 }

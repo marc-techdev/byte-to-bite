@@ -57,10 +57,16 @@ class FavoritesFragment : Fragment() {
         setupSearch()
     }
 
+    // With MainActivity setMaxLifecycle(), this fires whenever the tab becomes active
+    override fun onResume() {
+        super.onResume()
+        loadFavoriteRecipes()
+    }
+
     private fun setupRecyclerView() {
         favoritesAdapter = RecipesAdapter(
             recipes = mutableListOf(),
-            onRecipeClick = { /* Handle click */ },
+            onRecipeClick = { /* optional */ },
             onFavoriteClick = { recipe -> toggleFavorite(recipe) }
         )
 
@@ -72,10 +78,7 @@ class FavoritesFragment : Fragment() {
 
     private fun setupSearch() {
         searchEditText.addTextChangedListener(object : TextWatcher {
-            override fun afterTextChanged(s: Editable?) {
-                filterFavorites(s.toString())
-            }
-
+            override fun afterTextChanged(s: Editable?) { filterFavorites(s.toString()) }
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
         })
@@ -85,9 +88,7 @@ class FavoritesFragment : Fragment() {
         filteredRecipes = if (query.isEmpty()) {
             favoriteRecipes.toMutableList()
         } else {
-            favoriteRecipes.filter {
-                it.title.contains(query, ignoreCase = true)
-            }.toMutableList()
+            favoriteRecipes.filter { it.title.contains(query, ignoreCase = true) }.toMutableList()
         }
 
         favoritesAdapter.updateRecipes(filteredRecipes)
@@ -103,9 +104,9 @@ class FavoritesFragment : Fragment() {
 
             val recipeListType = object : TypeToken<List<Recipe>>() {}.type
             allRecipes = Gson().fromJson(jsonString, recipeListType)
-
         } catch (e: Exception) {
             e.printStackTrace()
+            allRecipes = emptyList()
         }
     }
 
@@ -137,11 +138,9 @@ class FavoritesFragment : Fragment() {
     }
 
     private fun toggleFavorite(recipe: Recipe) {
+        // Unfavorite from within the Favorites tab (use commit to be synchronous)
         recipe.isFavorite = false
-        with(sharedPref.edit()) {
-            remove(recipe.id.toString())
-            apply()
-        }
+        sharedPref.edit().remove(recipe.id.toString()).commit()
 
         favoriteRecipes.removeAll { it.id == recipe.id }
         filterFavorites(searchEditText.text.toString())

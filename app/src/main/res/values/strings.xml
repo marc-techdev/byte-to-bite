@@ -199,6 +199,19 @@ Across the archipelago, each region adds its own flavors and techniques to Filip
     <string name="recipes_protein_fish">Fish</string>
     <string name="recipes_protein_shrimp">Shrimp</string>
 
+    <string name="scan_tutorial_title">How scanning works</string>
+    <string name="scan_tutorial_body">Point the camera at one ingredient in good light. Add more, then tap “Find Recipes”.</string>
+    <string name="scan_tutorial_got_it">Got it</string>
+    <string name="scan_tutorial_skip">Skip</string>
+    <string name="cd_scan_tutorial_poster">Scan tutorial poster</string>
+    <string name="cd_play_overlay">Play</string>
+    <string name="cd_scan_tutorial_help">Play tutorial</string>
+
+    <string name="cd_play_pause">Play or pause</string>
+    <string name="cd_mute_unmute">Mute or unmute</string>
+
+
+
 
 
 

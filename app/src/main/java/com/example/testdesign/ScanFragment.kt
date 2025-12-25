@@ -13,9 +13,11 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.widget.AppCompatButton
+import androidx.core.content.edit
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.testdesign.tutorial.ScanTutorialBottomSheet
 import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
 import com.google.gson.Gson
@@ -29,6 +31,7 @@ class ScanFragment : Fragment() {
     private lateinit var btnClearAll: TextView
     private lateinit var btnFindRecipes: AppCompatButton
     private lateinit var btnAddProtein: AppCompatButton
+    private var btnHelpTutorial: View? = null // play icon near title
 
     private lateinit var scannedIngredientsAdapter: ScannedIngredientsAdapter
     private val scannedIngredients = mutableListOf<ScannedIngredientsAdapter.ScannedIngredient>()
@@ -68,6 +71,7 @@ class ScanFragment : Fragment() {
         btnClearAll = view.findViewById(R.id.btn_clear_all)
         btnFindRecipes = view.findViewById(R.id.btn_find_recipes)
         btnAddProtein = view.findViewById(R.id.btn_add_protein)
+        btnHelpTutorial = view.findViewById(R.id.iv_help_tutorial) // play icon
 
         setupRecycler()
         setupClicks()
@@ -91,14 +95,37 @@ class ScanFragment : Fragment() {
     private fun setupClicks() {
         btnScanIngredient.setOnClickListener { openCamera() }
 
+        // long-press = open tutorial
+        btnScanIngredient.setOnLongClickListener {
+            activity?.let {
+                ScanTutorialBottomSheet.showRaw(
+                    host = it,
+                    videoResId = R.raw.scan_tutorial,
+                    subtitleResId = 0,
+                    startMuted = false
+                )
+            }
+            true
+        }
+
+        // play/help icon near title
+        btnHelpTutorial?.setOnClickListener {
+            activity?.let {
+                ScanTutorialBottomSheet.showRaw(
+                    host = it,
+                    videoResId = R.raw.scan_tutorial,
+                    subtitleResId = 0,
+                    startMuted = false
+                )
+            }
+        }
+
         btnClearAll.setOnClickListener { clearAllIngredients() }
 
         btnFindRecipes.setOnClickListener {
-            // Build the names list (includes proteins you added via dialog)
             val names = ArrayList(scannedIngredients.map { it.name })
             val act = activity as? MainActivity
             if (names.isEmpty()) {
-                // No toast, just open Recipes tab normally
                 act?.openRecipesTab()
             } else {
                 act?.openRecipesWithScannedFilter(names)
@@ -171,7 +198,7 @@ class ScanFragment : Fragment() {
     private fun saveIngredients() {
         try {
             val json = gson.toJson(scannedIngredients)
-            sharedPreferences.edit().putString(KEY_INGREDIENTS, json).apply()
+            sharedPreferences.edit { putString(KEY_INGREDIENTS, json) }
         } catch (_: Exception) {}
     }
 

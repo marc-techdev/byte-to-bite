@@ -21,6 +21,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import java.io.ByteArrayOutputStream
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
+import kotlin.math.max
 
 class CameraActivity : AppCompatActivity() {
 
@@ -40,6 +41,31 @@ class CameraActivity : AppCompatActivity() {
 
         const val EXTRA_SCANNED_INGREDIENT = "scanned_ingredient"
         const val EXTRA_CONFIDENCE = "confidence"
+
+        // ---- NEW: simple, strict gates (tune as needed) ----
+        private const val ACCEPT_THRESHOLD = 0.55f     // try 0.55–0.65
+        private const val MIN_MARGIN       = 0.15f     // top1 - top2
+        private val REJECT_LABELS          = setOf("unknown")
+
+        // Only accept labels you actually support in UI/recipes
+        private val SUPPORTED_LABELS = setOf(
+            "Calamansi",
+            "Carrot", "Carrots",
+            "Chayote",
+            "Egg",
+            "Eggplant",
+            "Garlic",
+            "Ginger",
+            "Potato", "Potatoes",
+            "Radish",
+            "Red Onion",
+            "Tomato", "Tomatoes",
+            "White Onion"
+        )
+
+        private const val MSG_TRY_AGAIN = "Couldn't confidently identify that—try better lighting and fill the frame with one ingredient."
+        private const val MSG_UNKNOWN   = "We couldn’t identify that ingredient. Please try again."
+        private const val MSG_AMBIG     = "That looks too similar to another ingredient. Try a clearer shot."
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -119,23 +145,54 @@ class CameraActivity : AppCompatActivity() {
     private fun classifyImage(bitmap: Bitmap) {
         cameraExecutor.execute {
             try {
-                val results = classifier.classifyImage(bitmap)
+                val results = classifier.classifyImage(bitmap) // already sorted high→low
                 runOnUiThread {
-                    if (results.isNotEmpty()) {
-                        val top = results.first()
-                        if (top.confidence > 0.30f) {
-                            val intent = Intent().apply {
-                                putExtra(EXTRA_SCANNED_INGREDIENT, top.title)
-                                putExtra(EXTRA_CONFIDENCE, top.confidence)
-                            }
-                            setResult(RESULT_OK, intent)
-                            finish()
-                        } else {
-                            Toast.makeText(this@CameraActivity, "Could not identify ingredient clearly. Please try again.", Toast.LENGTH_LONG).show()
-                        }
-                    } else {
-                        Toast.makeText(this@CameraActivity, "No ingredients detected. Please try again.", Toast.LENGTH_LONG).show()
+                    if (results.isEmpty()) {
+                        Toast.makeText(this@CameraActivity, MSG_TRY_AGAIN, Toast.LENGTH_LONG).show()
+                        return@runOnUiThread
                     }
+
+                    // Debug: see why something was accepted/rejected
+                    val dbg = results.take(3).joinToString { "${it.title}:${"%.2f".format(it.confidence)}" }
+                    Log.d(TAG, "Predictions: $dbg")
+
+                    val top       = results[0]
+                    val topLabel  = top.title.trim()
+                    val topConf   = top.confidence
+                    val secondConf = results.getOrNull(1)?.confidence ?: 0f
+                    val margin    = topConf - secondConf
+
+                    // Block explicit "Unknown"
+                    if (REJECT_LABELS.contains(topLabel.lowercase())) {
+                        Toast.makeText(this@CameraActivity, MSG_UNKNOWN, Toast.LENGTH_LONG).show()
+                        return@runOnUiThread
+                    }
+
+                    // Confidence gate
+                    if (topConf < ACCEPT_THRESHOLD) {
+                        Toast.makeText(this@CameraActivity, MSG_TRY_AGAIN, Toast.LENGTH_LONG).show()
+                        return@runOnUiThread
+                    }
+
+                    // Ambiguity gate
+                    if (margin < MIN_MARGIN) {
+                        Toast.makeText(this@CameraActivity, MSG_AMBIG, Toast.LENGTH_LONG).show()
+                        return@runOnUiThread
+                    }
+
+                    // Whitelist gate
+                    if (!isSupported(topLabel)) {
+                        Toast.makeText(this@CameraActivity, MSG_TRY_AGAIN, Toast.LENGTH_LONG).show()
+                        return@runOnUiThread
+                    }
+
+                    // Passed all gates → return result
+                    val intent = Intent().apply {
+                        putExtra(EXTRA_SCANNED_INGREDIENT, normalizeForUi(topLabel))
+                        putExtra(EXTRA_CONFIDENCE, topConf)
+                    }
+                    setResult(RESULT_OK, intent)
+                    finish()
                 }
             } catch (e: Exception) {
                 Log.e(TAG, "Classification error: ${e.message}", e)
@@ -146,27 +203,28 @@ class CameraActivity : AppCompatActivity() {
         }
     }
 
+    // ---- NEW: helpers ----
+    private fun isSupported(raw: String): Boolean {
+        SUPPORTED_LABELS.forEach { if (it.equals(raw, ignoreCase = true)) return true }
+        return false
+    }
+
+    private fun normalizeForUi(raw: String): String = when {
+        raw.equals("Carrots",  true) -> "Carrot"
+        raw.equals("Potatoes", true) -> "Potato"
+        raw.equals("Tomatoes", true) -> "Tomato"
+        else -> raw
+    }
+
     private fun showSnapTips() {
         try {
             Log.d(TAG, "Creating BottomSheetDialog")
             val dialog = BottomSheetDialog(this)
-
-            Log.d(TAG, "Inflating layout")
             val view = layoutInflater.inflate(R.layout.sheet_snap_tips, null)
-
-            Log.d(TAG, "Setting content view")
             dialog.setContentView(view)
-
-            Log.d(TAG, "Setting button listener")
-            // Use regular Button instead of MaterialButton
             val button = view.findViewById<Button>(R.id.btnContinue)
-            button?.setOnClickListener {
-                dialog.dismiss()
-            }
-
-            Log.d(TAG, "Showing dialog")
+            button?.setOnClickListener { dialog.dismiss() }
             dialog.show()
-
         } catch (e: Exception) {
             Log.e(TAG, "showSnapTips failed: ${e.message}", e)
             e.printStackTrace()

@@ -34,6 +34,11 @@
         <item name="android:paddingEnd">0dp</item>
     </style>
 
+    <style name="ScanTutorial_MediumRound">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
 
 
 
